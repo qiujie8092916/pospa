@@ -1,42 +1,15 @@
 var path = require('path');
 var cooking = require('cooking');
-var App = require('./app.json');
-
-const merge = function(a, b) {
-  return {
-    css: (a.css || []).concat(b.css || []),
-    js: (a.js || []).concat(b.js || [])
-  }
-}
-
-const templates = function() {
-  return App.pages.map(p => {
-    return {
-      title: p.title,
-      filename: p.entry + '.html',
-      template: path.resolve(__dirname, 'index.tpl'),
-      cdn: merge(App.cdn, p.cdn),
-      chunks: ['vendor', 'manifest', p.entry]
-    }
-  })
-}
-
-const entries = function() {
-  var result = {}
-  App.pages.forEach(p => {
-    result[p.entry] = path.resolve(App.basePath, p.entry)
-  })
-  return result
-}
+var build = require('./app.js');
 
 cooking.set({
-  entry: {
-    app: ['babel-polyfill', './src/main.js']
-  },
-  // entry: entries(),
+  // entry: {
+  //   app: ['babel-polyfill', './src/index.js']
+  // },
+  entry: build.entries(),
+  // template: "./index.tpl",
+  template: build.templates(),
   dist: './dist',
-  // template: templates(),
-  template: "./index.tpl",
   devServer: {
     enable: true,
     port: 8081,
@@ -63,7 +36,7 @@ cooking.set({
   clean: true,
   hash: true,
   sourceMap: true,
-  minimize: true,
+  minimize: false,
   chunk: true, // see https://cookingjs.github.io/zh-cn/configuration.html#chunk
   postcss: [
     // require('...')
@@ -76,7 +49,8 @@ cooking.set({
   alias: {
     'src': path.join(__dirname, 'src')
   },
-  extends: ['vue2', 'lint', 'sass', 'autoprefixer']
+  extends: ['vue2', 'lint', 'sass', 'autoprefixer'],
+  externals: build.externals()
 });
 
 module.exports = cooking.resolve();
