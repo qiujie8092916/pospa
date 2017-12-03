@@ -21,7 +21,7 @@ exports.templates = function() {
   return App.pages.map(p => {
     return {
       title: p.title,
-      filename: rootPath + "/" + p.entry + "/" + p.entry + '.html',
+      filename: rootPath + "/" + p.entry + "/" + p.entry + ".html",
       template: path.resolve(App.basePath, p.entry, 'index.tpl'),
       cdn: merge(App.cdn, p.cdn),
       chunks: ['vendor', 'manifest', p.entry]
