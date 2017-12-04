@@ -13,6 +13,7 @@
   "author": "qiujie",
   "license": "ISC",
   "dependencies": {
+    "vue-router": "^3.0.1",
     "vue-ueditor": "^0.1.3"
   },
   "devDependencies": {

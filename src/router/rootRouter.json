@@ -17,12 +17,9 @@
   {
     "js": [
       "//cdn.jsdelivr.net/vue/2.0.0-rc.7/vue.min.js",
-      "//cdn.jsdelivr.net/vuex/2.0.0-rc.5/vuex.min.js",
-      "//unpkg.com/element-ui/lib/index.js"
+      "//cdn.jsdelivr.net/vuex/2.0.0-rc.5/vuex.min.js"
     ],
-    "css": [
-      "//unpkg.com/element-ui/lib/theme-chalk/index.css"
-    ]
+    "css": []
   },
   "externals":
   {

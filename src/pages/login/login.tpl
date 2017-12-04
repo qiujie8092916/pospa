@@ -22,7 +22,7 @@
 </head>
 
 <body>
-  <div id="app"></div>
+  <div id="login"></div>
   <% for (var i in htmlWebpackPlugin.options.cdn.js) { %>
     <script src="<%= htmlWebpackPlugin.options.cdn.js[i] %>"></script>
     <% } %>

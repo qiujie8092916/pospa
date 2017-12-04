@@ -15,15 +15,14 @@
   <meta http-equiv="cache-control" content="no-cache">
   <meta http-equiv="expires" content="0">
   <!-- Favicon -->
-  <link rel="shortcut icon" href="static/img/icepoint.ico">
-  <link rel="bookmark" href="static/img/icepoint.ico">
+  <link rel="shortcut icon" href="/src/assets/favicon/icepoint.ico">
   <% for (var i in htmlWebpackPlugin.options.cdn.css) { %>
     <link rel="stylesheet" href="<%= htmlWebpackPlugin.options.cdn.css[i] %>">
     <% } %>
 </head>
 
 <body>
-  <div id="app"></div>
+  <div id="admin"></div>
   <% for (var i in htmlWebpackPlugin.options.cdn.js) { %>
     <script src="<%= htmlWebpackPlugin.options.cdn.js[i] %>"></script>
     <% } %>

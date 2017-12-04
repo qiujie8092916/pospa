@@ -1,6 +1,5 @@
-var App = require('./src/router/router.json');
+var App = require('./src/router/rootRouter.json');
 var path = require('path');
-var rootPath = "sp";
 
 var merge = function(a, b) {
   return {
@@ -12,7 +11,7 @@ var merge = function(a, b) {
 exports.entries = function() {
   var result = {}
   App.pages.forEach(p => {
-    result[p.entry] = path.resolve(App.basePath, p.entry)
+    result[p.entry] = path.resolve(App.basePath, p.entry, p.entry)
   })
   return result
 }
@@ -21,10 +20,11 @@ exports.templates = function() {
   return App.pages.map(p => {
     return {
       title: p.title,
-      filename: rootPath + "/" + p.entry + "/" + p.entry + ".html",
-      template: path.resolve(App.basePath, p.entry, 'index.tpl'),
+      filename: "pospa/" + p.entry + ".html",
+      template: path.resolve(App.basePath, p.entry, p.entry + '.tpl'),
       cdn: merge(App.cdn, p.cdn),
-      chunks: ['vendor', 'manifest', p.entry]
+      chunks: ['vendor', 'manifest', p.entry],
+
     }
   })
 }

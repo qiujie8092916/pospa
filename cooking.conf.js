@@ -1,13 +1,9 @@
 var path = require('path');
 var cooking = require('cooking');
-var build = require('./app.js');
+var build = require('./build.js');
 
 cooking.set({
-  // entry: {
-  //   app: ['babel-polyfill', './src/index.js']
-  // },
   entry: build.entries(),
-  // template: "./index.tpl",
   template: build.templates(),
   dist: './dist',
   devServer: {
