@@ -12,14 +12,17 @@
     "cdn":
     {}
   }],
-  "basePath": "./src/pages/",
+  "basePath": "./src/rootPages/",
   "cdn":
   {
     "js": [
       "//cdn.jsdelivr.net/vue/2.0.0-rc.7/vue.min.js",
       "//cdn.jsdelivr.net/vuex/2.0.0-rc.5/vuex.min.js"
     ],
-    "css": []
+    "css": [
+      "/src/assets/css/theme.css",
+      "/src/assets/css/bootstrap.min.css"
+    ]
   },
   "externals":
   {

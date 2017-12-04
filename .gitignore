@@ -1,9 +1,9 @@
-#*.log
-#.cache
-#.DS_Store
-#.idea
+*.log
+.cache
+.DS_Store
+.idea
 build
 dist
-#node_modules
-#.gitkeep
-#converage
+node_modules
+.gitkeep
+converage
