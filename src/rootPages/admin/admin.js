@@ -1,7 +1,7 @@
 import Vue from 'vue';
-import store from '../../store/store';
-import App from './admin.vue';
 import VueRouter from 'vue-router';
+import store from '../../store';
+import App from './admin.vue';
 import router from '../../router/router.js';
 
 import ElementUI from 'element-ui';
@@ -14,6 +14,5 @@ new Vue({ // eslint-disable-line
   el: '#admin',
   router,
   store,
-  ...App,
-  render: h => h(App)
+  ...App
 });

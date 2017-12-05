@@ -3,7 +3,7 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
-const router = new VueRouter({
+export default new VueRouter({
   routes: [{
     name: '主页',
     path: '/admin'
@@ -15,5 +15,3 @@ const router = new VueRouter({
     path: '/time-entries'
   }]
 });
-
-export default router;

@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack');
 var cooking = require('cooking');
 var build = require('./build.js');
 
@@ -43,7 +44,11 @@ cooking.set({
   static: true,
   extractCSS: '[name].[contenthash:7].css',
   alias: {
-    'src': path.join(__dirname, 'src')
+    'vue$': 'vue/dist/vue.js',
+    'jquery': path.resolve(__dirname, './node_modules/jquery/src/jquery'),
+    'src': path.join(__dirname, 'src'),
+    'assets': path.resolve(__dirname, '../src/assets'),
+    'components': path.resolve(__dirname, '../src/components')
   },
   extends: ['vue2', 'lint', 'sass', 'autoprefixer'],
   externals: build.externals()
