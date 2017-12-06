@@ -8,5 +8,5 @@ import App from './selling_out_details';
 export default App;
 </script>
 <style lang='scss' scoped>
-@import 'selling_out_details';
+@import './selling_out_details';
 </style>

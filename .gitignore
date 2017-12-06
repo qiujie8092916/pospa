@@ -7,3 +7,4 @@ dist
 node_modules
 .gitkeep
 converage
+!node_modules/element-ui/lib/element-ui.common.js

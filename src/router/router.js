@@ -1,4 +1,3 @@
-'use strict';
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Store from '@/store';
@@ -40,7 +39,10 @@ function authToRoutes() {
     name: '主页',
     index: 'dashBoard',
     path: '/dashBoard',
-    component: dashBoard
+    meta: {
+      keepAlive: true
+    },
+    component: components.dashBoard
   }];
 
   Store.state.auths.forEach(auth => {
@@ -50,7 +52,10 @@ function authToRoutes() {
       routes.push({
         name: auth.authorityName,
         index: auth.authorityCode,
-        path: auth.authorityHtmlElement.substring(0, auth.authorityHtmlElement.indexOf('.')),
+        path: '/' + auth.authorityHtmlElement.substring(0, auth.authorityHtmlElement.indexOf('.')),
+        meta: {
+          keepAlive: true
+        },
         component: components[auth.authorityHtmlElement.substring(0, auth.authorityHtmlElement.indexOf('.'))]
       });
     }

@@ -3226,6 +3226,7 @@ fieldset[disabled] .checkbox label {
 
 
 
+
 /********qj:20170316***********/
 
 .font-white {
@@ -3257,6 +3258,7 @@ font.must {
   font-size: 18px;
   vertical-align: top;
 }
+
 
 
 
@@ -4313,6 +4315,7 @@ tbody.collapse.in {
 
 
 
+
 /* 
 .btn .caret {
   margin-left: 0
@@ -4954,7 +4957,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 
 .navbar-brand {
   float: left;
-  padding: 15px 15px;
+  padding: 6px 15px 6px 6px;
   font-size: 18px;
   line-height: 20px;
   height: 100%;
@@ -7719,6 +7722,7 @@ button.close {
 t {
   display: none !important
 }
+
 
 
 

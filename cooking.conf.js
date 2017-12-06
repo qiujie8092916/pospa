@@ -47,7 +47,8 @@ cooking.set({
   alias: {
     'vue$': 'vue/dist/vue.js',
     'jquery': path.resolve(__dirname, './node_modules/jquery/src/jquery'),
-    '@': path.join(__dirname, 'src')
+    '@': path.join(__dirname, 'src'),
+    'root': __dirname
   },
   extends: ['vue2', 'lint', 'sass', 'autoprefixer'],
   externals: build.externals()

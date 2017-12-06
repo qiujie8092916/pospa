@@ -8,5 +8,5 @@ import App from './dashBoard';
 export default App;
 </script>
 <style lang='scss' scoped>
-@import 'dashBoard';
+@import './dashBoard';
 </style>

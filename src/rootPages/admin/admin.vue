@@ -1,8 +1,8 @@
 <template>
   <el-container style="height:100%">
-    <el-header style="height:61px;">
+    <el-header style="height:41px;">
       <router-link to="/home" class="navbar-brand pull-left pln">
-        <img alt="icepointcloud-logo" src="https://storage.icepointcloud.com//8cce867937cba010627a503748e6aa2b/20171012/659aa202-9edb-43fd-8c9e-b83e1aaf22858996416171504304110.png-jpg" width="90" />
+        <img alt="icepointcloud-logo" src="https://storage.icepointcloud.com//8cce867937cba010627a503748e6aa2b/20171012/659aa202-9edb-43fd-8c9e-b83e1aaf22858996416171504304110.png-jpg" width="85" />
       </router-link>
       <el-menu :default-active="activeHeader" class="el-menu pull-left" mode="horizontal" @select="handleNavClick">
         <el-menu-item index="dashBoard">
@@ -25,7 +25,7 @@
         </template>
       </el-menu>
     </el-header>
-    <el-container class="p10">
+    <el-container>
       <multi-tab></multi-tab>
     </el-container>
   </el-container>
@@ -39,7 +39,6 @@ export default {
   },
   data() {
     return {
-      activeHeader: 'dashBoard',
       noNeedNav: [
         801, // 订货配置
         901, // 商城设置
@@ -54,6 +53,21 @@ export default {
   computed: {
     auths() {
       return this.$store.state.auths;
+    },
+    activeHeader() {
+      var that = this,
+        activeHead;
+      if (that.$route.path === '/' ||
+        that.$route.path === '/dashBoard') {
+        activeHead = { authorityCode: 'dashBoard' };
+      } else {
+        that.$store.state.auths.forEach(auth => {
+          if (auth.authorityHtmlElement && (auth.authorityHtmlElement.split('.')[0] === that.$route.path.split('/')[1])) {
+            activeHead = auth;
+          }
+        });
+      }
+      return activeHead.authorityCode;
     }
   },
   methods: {
@@ -66,8 +80,16 @@ export default {
       };
       return false;
     },
-    handleNavClick(key, keyPath) {
-      console.log(key, keyPath);
+    handleNavClick(key) {
+      let name = '',
+        path = '/';
+      this.$store.state.auths.forEach(auth => {
+        if (auth.authorityCode === key) {
+          name = auth.authorityName;
+          path += auth.authorityHtmlElement.split('.')[0];
+        }
+      });
+      this.$router.push({ name: name, path: path });
     }
   }
 };

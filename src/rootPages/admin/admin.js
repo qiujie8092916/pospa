@@ -5,7 +5,6 @@ import App from './admin.vue';
 import router from '../../router/router.js';
 
 import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
 import '../../assets/theme/element-variables.scss';
 Vue.use(ElementUI, { size: 'mini' });
 
@@ -15,5 +14,6 @@ new Vue({ // eslint-disable-line
   el: '#admin',
   router,
   store,
-  ...App
+  // ...App
+  render: h => h(App)
 });

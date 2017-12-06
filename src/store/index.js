@@ -5,10 +5,19 @@ import multiTab from './modules/multiTab/index.js';
 
 Vue.use(Vuex);
 
+const state = Object.assign(
+  multiTab.state,
+  authNav.state
+);
+
+const mutations = Object.assign(
+  multiTab.mutations
+);
+
 export default new Vuex.Store({
   modules: {},
-  state: Object.assign(multiTab.state, authNav.state),
+  state,
   getters: {},
   actions: {},
-  mutations: multiTab.mutations
+  mutations
 });
