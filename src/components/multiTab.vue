@@ -1,28 +1,24 @@
 <template>
-  <div style="-webkit-box-flex: 1; -ms-flex: 1; flex: 1; padding: 10px 20px; overflow: auto;">
+  <div style="-webkit-box-flex: 1; -ms-flex: 1; flex: 1;overflow: auto;">
     <div class="template-tabs">
       <el-tabs v-model="activeTab" type="card" @edit="handleTabsEdit" @tab-click="handleClick">
-        <el-tab-pane v-for="(tab, index) in tabs" :key="tab.name" :name="tab.route" :closable="index === 0 ? false: true">
+        <el-tab-pane v-for="(tab, index) in tabs" :key="tab.name" :name="tab.route" :closable="index === 0 ? false : true">
           <span slot="label">{{tab.name}}</span>
+          <router-view></router-view>
         </el-tab-pane>
       </el-tabs>
-    </div>
-    <div class="content-wrap">
-      <router-view/>
     </div>
   </div>
 </template>
 <script>
-import leftSideBar from './multiTab.vue';
+import leftSideBar from './multiTab';
 export default {
   name: 'multiTab',
   components: {
     'leftSideBar': leftSideBar
   },
   data() {
-    return {
-      tabIndex: 1
-    };
+    return {};
   },
   computed: {
     activeTab: {
@@ -58,11 +54,6 @@ export default {
       console.log(tab, event);
     },
     handleTabsEdit(targetName, action) {
-      /*
-      if (action === 'add') {
-        let tabName = ++this.tabIndex + '';
-        this.$store.commit('addTab', tabName);
-      } else */
       if (action === 'remove') {
         this.$store.commit('removeTab', targetName);
       }
@@ -88,12 +79,13 @@ export default {
 <style lang="scss" scoped>
 .template-tabs {
   border: 1px solid #d8dce5;
+  height: 100%;
 }
 
 .content-wrap {
-  border-bottom: 1px solid #d1dbe5;
-  padding: 0 20px;
-  height: 90%;
+  height: 95%;
+  border: 1px solid #d1dbe5;
+  border-top: none;
 }
 </style>
 <!-- <left-side-bar class="mt1" v-if="$route.path === '/' || $route.path === '/admin'"></left-side-bar> 

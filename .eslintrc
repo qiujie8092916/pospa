@@ -9,6 +9,9 @@
   "rules":
   {
     "eol-last": 0,
+    "no-eval": 0,
+    "no-extend-native": 0,
+    "indent": ["off", 2],
     "space-before-function-paren": 0
   }
 }
