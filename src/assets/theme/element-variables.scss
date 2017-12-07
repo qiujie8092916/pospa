@@ -1,20 +1,22 @@
 /* Element Chalk Variables */
 
 
+/* 
+	不编辑此文件
+	如需修改，请添加至../css/variables.scss覆盖变量
+*/
+
+
 /* Transition
 -------------------------- */
 
-$--all-transition: all .15s cubic-bezier(.645, .045, .355, 1) !default;
-$--fade-transition: opacity 150ms cubic-bezier(0.23, 1, 0.32, 1) !default;
-$--fade-linear-transition: opacity 100ms linear !default;
-$--md-fade-transition: transform 150ms cubic-bezier(0.23, 1, 0.32, 1) 50ms,
-opacity 150ms cubic-bezier(0.23, 1, 0.32, 1) 50ms !default;
-$--border-transition-base: border-color .1s cubic-bezier(.645, .045, .355, 1) !default;
-$--color-transition-base: color .1s cubic-bezier(.645, .045, .355, 1) !default;
-
-
-
-
+$--all-transition: all .3s cubic-bezier(.645, .045, .355, 1) !default;
+$--fade-transition: opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
+$--fade-linear-transition: opacity 200ms linear !default;
+$--md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms,
+opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms !default;
+$--border-transition-base: border-color .2s cubic-bezier(.645, .045, .355, 1) !default;
+$--color-transition-base: color .2s cubic-bezier(.645, .045, .355, 1) !default;
 
 
 
@@ -24,12 +26,8 @@ $--color-transition-base: color .1s cubic-bezier(.645, .045, .355, 1) !default;
 $--color-white: #fff !default;
 $--color-black: #000 !default;
 
-$--color-primary: #4d9fd8 !default;
+$--color-primary: #409EFF !default;
 $--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default;
-
-
-
-
 
 
 /* 53a8ff */
@@ -37,17 +35,9 @@ $--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default;
 $--color-primary-light-2: mix($--color-white, $--color-primary, 20%) !default;
 
 
-
-
-
-
 /* 66b1ff */
 
 $--color-primary-light-3: mix($--color-white, $--color-primary, 30%) !default;
-
-
-
-
 
 
 /* 79bbff */
@@ -55,17 +45,9 @@ $--color-primary-light-3: mix($--color-white, $--color-primary, 30%) !default;
 $--color-primary-light-4: mix($--color-white, $--color-primary, 40%) !default;
 
 
-
-
-
-
 /* 8cc5ff */
 
 $--color-primary-light-5: mix($--color-white, $--color-primary, 50%) !default;
-
-
-
-
 
 
 /* a0cfff */
@@ -73,17 +55,9 @@ $--color-primary-light-5: mix($--color-white, $--color-primary, 50%) !default;
 $--color-primary-light-6: mix($--color-white, $--color-primary, 60%) !default;
 
 
-
-
-
-
 /* b3d8ff */
 
 $--color-primary-light-7: mix($--color-white, $--color-primary, 70%) !default;
-
-
-
-
 
 
 /* c6e2ff */
@@ -91,17 +65,9 @@ $--color-primary-light-7: mix($--color-white, $--color-primary, 70%) !default;
 $--color-primary-light-8: mix($--color-white, $--color-primary, 80%) !default;
 
 
-
-
-
-
 /* d9ecff */
 
 $--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default;
-
-
-
-
 
 
 /* ecf5ff */
@@ -128,10 +94,6 @@ $--color-text-placeholder: #b4bccc !default;
 
 
 
-
-
-
-
 /* Link
 -------------------------- */
 
@@ -140,18 +102,10 @@ $--link-hover-color: $--color-primary !default;
 
 
 
-
-
-
-
 /* Background
 -------------------------- */
 
 $--background-color-base: #f5f7fa !default;
-
-
-
-
 
 
 
@@ -172,10 +126,6 @@ $--border-radius-circle: 100% !default;
 
 
 
-
-
-
-
 /* Box-shadow
 -------------------------- */
 
@@ -187,18 +137,10 @@ $--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !default;
 
 
 
-
-
-
-
 /* Fill
 -------------------------- */
 
 $--fill-base: $--color-white !default;
-
-
-
-
 
 
 
@@ -215,18 +157,10 @@ $--font-line-height-primary: 24px !default;
 
 
 
-
-
-
-
 /* Size
 -------------------------- */
 
 $--size-base: 14px !default;
-
-
-
-
 
 
 
@@ -239,10 +173,6 @@ $--index-popper: 2000 !default;
 
 
 
-
-
-
-
 /* Disable base
 -------------------------- */
 
@@ -252,19 +182,11 @@ $--disabled-border-base: $--border-color-light !default;
 
 
 
-
-
-
-
 /* Icon
 -------------------------- */
 
 $--icon-color: #666 !default;
 $--icon-color-base: $--color-info !default;
-
-
-
-
 
 
 
@@ -316,10 +238,6 @@ $--checkbox-button-font-size: $--font-size-base !default;
 $--checkbox-button-checked-fill: $--color-primary !default;
 $--checkbox-button-checked-color: $--color-white !default;
 $--checkbox-button-checked-border-color: $--color-primary !default;
-
-
-
-
 
 
 
@@ -377,10 +295,6 @@ $--radio-button-disabled-checked-fill: $--border-color-extra-light !default;
 
 
 
-
-
-
-
 /* Select
 -------------------------- */
 
@@ -416,10 +330,6 @@ $--select-dropdown-border: solid 1px $--border-color-light !default;
 
 
 
-
-
-
-
 /* Alert
 -------------------------- */
 
@@ -437,10 +347,6 @@ $--alert-danger-color: $--color-danger-lighter !default;
 
 $--alert-icon-size: 16px !default;
 $--alert-icon-large-size: 28px !default;
-
-
-
-
 
 
 
@@ -462,10 +368,6 @@ $--msgbox-danger-color: $--color-danger !default;
 
 
 
-
-
-
-
 /* Message
 -------------------------- */
 
@@ -482,10 +384,6 @@ $--message-success-color: $--color-success !default;
 $--message-info-color: $--color-info !default;
 $--message-warning-color: $--color-warning !default;
 $--message-danger-color: $--color-danger !default;
-
-
-
-
 
 
 
@@ -512,10 +410,6 @@ $--notification-success-color: $--color-success !default;
 $--notification-info-color: $--color-info !default;
 $--notification-warning-color: $--color-warning !default;
 $--notification-danger-color: $--color-danger !default;
-
-
-
-
 
 
 
@@ -559,10 +453,6 @@ $--input-mini-height: 28px !default;
 
 
 
-
-
-
-
 /* Cascader
 -------------------------- */
 
@@ -589,10 +479,6 @@ $--cascader-menu-submenu-shadow: 1px 1px 2px rgba($--color-black, 0.14),
 
 
 
-
-
-
-
 /* Group
 -------------------------- */
 
@@ -602,10 +488,6 @@ $--group-option-fill-hover: rgba($--color-black, 0.06) !default;
 $--group-title-color: $--color-black !default;
 $--group-title-font-size: $--font-size-base !default;
 $--group-title-width: 66px !default;
-
-
-
-
 
 
 
@@ -622,10 +504,6 @@ $--tab-header-fill-hover: rgba($--color-black, 0.06) !default;
 $--tab-vertical-header-width: 90px !default;
 $--tab-vertical-header-count-color: $--color-white !default;
 $--tab-vertical-header-count-fill: $--color-text-secondary !default;
-
-
-
-
 
 
 
@@ -687,18 +565,10 @@ $--button-active-shade-percent: 10% !default;
 
 
 
-
-
-
-
 /* cascader
 -------------------------- */
 
 $--cascader-height: 200px !default;
-
-
-
-
 
 
 
@@ -718,10 +588,6 @@ $--switch-button-size: 16px !default;
 
 
 
-
-
-
-
 /* Dialog
 -------------------------- */
 
@@ -732,10 +598,6 @@ $--dialog-title-font-size: $--font-size-large !default;
 $--dialog-font-size: 14px !default;
 $--dialog-line-height: $--font-line-height-primary !default;
 $--dialog-padding-primary: 15px !default;
-
-
-
-
 
 
 
@@ -750,10 +612,6 @@ $--table-current-row-background: $--color-primary-light-9 !default;
 $--table-header-background: $--color-text-secondary !default;
 $--table-footer-background: $--color-text-placeholder !default;
 $--table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, .12) !default;
-
-
-
-
 
 
 
@@ -774,10 +632,6 @@ $--pagination-hover-color: $--color-white !default;
 
 
 
-
-
-
-
 /* Popover
 -------------------------- */
 
@@ -792,10 +646,6 @@ $--popover-title-color: $--color-text-primary !default;
 
 
 
-
-
-
-
 /* Tooltip
 -------------------------- */
 
@@ -805,10 +655,6 @@ $--tooltip-font-size: 12px !default;
 $--tooltip-border-color: $--color-text-primary !default;
 $--tooltip-arrow-size: 6px !default;
 $--tooltip-padding: 10px !default;
-
-
-
-
 
 
 
@@ -844,10 +690,6 @@ $--tag-danger-color: $--color-danger !default;
 
 
 
-
-
-
-
 /* Tree
 -------------------------- */
 
@@ -857,20 +699,12 @@ $--tree-expand-icon-color: $--color-text-placeholder !default;
 
 
 
-
-
-
-
 /* Dropdown
 -------------------------- */
 
 $--dropdown-menu-box-shadow: $--box-shadow-light !default;
 $--dropdown-menuItem-hover-fill: $--color-primary-light-9 !default;
 $--dropdown-menuItem-hover-color: $--link-color !default;
-
-
-
-
 
 
 
@@ -885,20 +719,12 @@ $--badge-size: 18px !default;
 
 
 
-
-
-
-
 /* Card
 --------------------------*/
 
 $--card-border-color: $--border-color-lighter !default;
 $--card-border-radius: 4px !default;
 $--card-padding: 20px !default;
-
-
-
-
 
 
 
@@ -920,20 +746,12 @@ $--slider-button-wrapper-offset: -15px !default;
 
 
 
-
-
-
-
 /* Steps
 --------------------------*/
 
 $--steps-border-color: $--disabled-border-base !default;
 $--steps-border-radius: 4px !default;
 $--steps-padding: 20px !default;
-
-
-
-
 
 
 
@@ -946,10 +764,6 @@ $--menu-item-hover-fill: $--color-primary-light-9 !default;
 
 
 
-
-
-
-
 /* Rate
 --------------------------*/
 
@@ -958,10 +772,6 @@ $--rate-font-size: $--font-size-base !default;
 $--rate-icon-size: 18px !default;
 $--rate-icon-margin: 6px !default;
 $--rate-icon-color: $--color-text-placeholder !default;
-
-
-
-
 
 
 
@@ -982,10 +792,6 @@ $--datepicker-cell-hover-color: #fff !default;
 
 
 
-
-
-
-
 /* Loading
 --------------------------*/
 
@@ -994,19 +800,11 @@ $--loading-fullscreen-spinner-size: 50px !default;
 
 
 
-
-
-
-
 /* Scrollbar
 --------------------------*/
 
 $--scrollbar-background-color: rgba($--color-text-secondary, .3) !default;
 $--scrollbar-hover-background-color: rgba($--color-text-secondary, .5) !default;
-
-
-
-
 
 
 
@@ -1025,10 +823,6 @@ $--carousel-indicator-out-color: $--border-color-hover !default;
 
 
 
-
-
-
-
 /* Collapse
 --------------------------*/
 
@@ -1041,10 +835,6 @@ $--collapse-header-size: 13px !default;
 $--collapse-content-fill: $--color-white !default;
 $--collapse-content-size: 13px !default;
 $--collapse-content-color: $--color-text-primary !default;
-
-
-
-
 
 
 
@@ -1064,18 +854,10 @@ $--transfer-filter-height: 32px !default;
 
 
 
-
-
-
-
 /* Header
   --------------------------*/
 
 $--header-padding: 0 20px !default;
-
-
-
-
 
 
 
@@ -1086,18 +868,10 @@ $--footer-padding: 0 20px !default;
 
 
 
-
-
-
-
 /* Main
 --------------------------*/
 
 $--main-padding: 20px !default;
-
-
-
-
 
 
 
@@ -1127,44 +901,3 @@ $--breakpoints-spec: ( 'xs-only': (max-width: $--sm - 1),
 'lg-and-down': (max-width: $--xl - 1),
 'xl-only': (min-width: $--xl),
 );
-
-
-
-
-
-/************************** 这是分割线 ********************/
-
-$--font-path: '../fonts';
-@import "../../../node_modules/element-ui/packages/theme-chalk/src/index";
-.el-menu--horizontal {
-  .el-menu-item {
-    height: 40px;
-    line-height: 40px;
-  }
-  .el-submenu {
-    .el-submenu__title {
-      height: 40px;
-      line-height: 40px;
-    }
-    &>.el-menu {
-      top: 45px;
-    }
-  }
-}
-
-.el-tabs--card {
-  height: 100%;
-  &>.el-tabs__header {
-    .el-tabs__nav {
-      border: 0;
-      border-right: 1px solid #dfe4ed;
-      border-radius: 0;
-    }
-  }
-  .el-tabs__content {
-    height: calc(100% - 55px);
-    &>.el-tab-pane {
-      height: 100%;
-    }
-  }
-}

@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center">
+  <div class="text-center qiujie">
     <strong>这是{{title}}</strong>
   </div>
 </template>

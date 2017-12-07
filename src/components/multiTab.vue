@@ -13,7 +13,6 @@
   </div>
 </template>
 <script>
-import headerNav from '@/rootPages/admin/admin';
 import leftSideBar from './multiTab';
 export default {
   name: 'multiTab',
@@ -74,7 +73,6 @@ export default {
   },
   methods: {
     handleClick(tab) {
-      console.log(headerNav);
       let route = this.$router.options.routes.filter(route => {
         return route.path === tab.name;
       });
