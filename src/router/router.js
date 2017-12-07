@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Store from '@/store';
+import dashBoard from '@/pages/dashBoard/dashBoard';
 Vue.use(VueRouter);
 // import tabContent from '@/components/tabContent';
 
@@ -10,10 +11,11 @@ function authToRoutes() {
     name: '主页',
     index: 'dashBoard',
     path: '/dashBoard',
+    alias: '/',
     meta: {
       keepAlive: true
     },
-    component: resolve => require(['@/pages/dashBoard/dashBoard'], resolve)
+    component: dashBoard
   }];
 
   Store.state.auths.forEach(auth => {
@@ -32,6 +34,11 @@ function authToRoutes() {
         component: resolve => require(['@/pages/' + componentName + '/' + componentName], resolve)
       });
     }
+  });
+
+  routes.push({
+    path: '*',
+    redirect: '/'
   });
 
   return routes;

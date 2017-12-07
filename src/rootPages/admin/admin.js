@@ -11,9 +11,8 @@ Vue.use(ElementUI, { size: 'mini' });
 Vue.use(VueRouter);
 
 new Vue({ // eslint-disable-line
-  el: '#admin',
   router,
   store,
   // ...App
   render: h => h(App)
-});
+}).$mount('#admin');

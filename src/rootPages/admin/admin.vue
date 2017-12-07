@@ -11,14 +11,14 @@
         <template v-for="x in auths">
           <template v-if="!x.hasChild">
             <el-menu-item :key="x.id" :index="x.authorityCode">
-              <router-link :to="{name: x.authorityName}">{{x.authorityName}}</router-link>
+              <router-link :to="'/' + x.authorityHtmlElement.substring(0, x.authorityHtmlElement.indexOf('.'))">{{x.authorityName}}</router-link>
             </el-menu-item>
           </template>
           <template v-else>
             <el-submenu v-if="!x.parentOrderNum && !noNeedNav.contains(x.orderNum)" :key="x.id" :index="x.authorityCode">
               <template slot="title" style="height: calc(100% - 1px);">{{x.authorityName}}</template>
               <el-menu-item v-for="y in auths" v-if="y.authorityHtmlElement && x.orderNum === y.parentOrderNum" :key="y.id" :index="y.authorityCode">
-                <router-link :to="{name: y.authorityName}">{{y.authorityName}}</router-link>
+                <router-link :to="'/' + y.authorityHtmlElement.substring(0, y.authorityHtmlElement.indexOf('.'))">{{y.authorityName}}</router-link>
               </el-menu-item>
             </el-submenu>
           </template>
@@ -64,10 +64,27 @@ export default {
         that.$store.state.auths.forEach(auth => {
           if (auth.authorityHtmlElement && (auth.authorityHtmlElement.split('.')[0] === that.$route.path.split('/')[1])) {
             activeHead = auth;
+            return false;
           }
         });
       }
       return activeHead.authorityCode;
+    }
+  },
+  created() {
+    let r = this.$router.options.routes.filter(route => {
+      return route.path === '/' + location.href.split('/').pop();
+    });
+    if (r.length) {
+      this.$router.push({
+        name: r[0].name,
+        path: r[0].path
+      });
+    } else {
+      this.$router.push({
+        name: this.$router.options.routes[0].name,
+        path: this.$router.options.routes[0].path
+      });
     }
   },
   methods: {
@@ -78,9 +95,13 @@ export default {
         if (auth.authorityCode === key) {
           name = auth.authorityName;
           path += auth.authorityHtmlElement.split('.')[0];
+          return false;
         }
       });
-      this.$router.push({ name: name, path: path });
+      this.$router.push({
+        name: name,
+        path: path
+      });
     }
   }
 };

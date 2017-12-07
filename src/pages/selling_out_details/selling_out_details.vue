@@ -1,6 +1,8 @@
 <template>
-  <div class="text-center qiujie">
-    <strong>这是{{title}}</strong>
+  <div class="text-center">
+    <el-main class="mt1 qiujie">
+      <strong>这是{{title}}</strong>
+    </el-main>
   </div>
 </template>
 <script>

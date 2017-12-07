@@ -4,12 +4,11 @@
       <el-tabs v-model="activeTab" type="card" @edit="handleTabsEdit" @tab-click="handleClick">
         <el-tab-pane v-for="(tab, index) in tabs" :key="tab.route" :name="tab.route" :closable="index === 0 ? false : true">
           <span slot="label">{{tab.name}}</span>
-          <keep-alive>
-            <router-view v-if="$route.meta.keepAlive"></router-view>
-          </keep-alive>
-          <router-view v-if="!$route.meta.keepAlive"></router-view>
         </el-tab-pane>
       </el-tabs>
+      <keep-alive>
+        <router-view v-if="$route.meta.keepAlive"></router-view>
+      </keep-alive>
     </div>
   </div>
 </template>
@@ -49,30 +48,34 @@ export default {
       route: '/dashBoard',
       name: '主页'
     });
-    if (that.$route.path === '/dashBoard' || that.$route.path === '/') {
-      that.$router.push({
-        name: '主页',
-        path: '/dashBoard'
-      });
+    // 开始非主页
+    if (that.$route.path === '/dashBoard') {
       that.$store.commit('setActiveTab', '/dashBoard');
-    } else {
-      let name = '';
-      that.$store.state.auths.forEach(auth => {
-        if (auth.authorityHtmlElement && (auth.authorityHtmlElement.split('.')[0] === that.$route.path.split('/').pop())) {
-          name = auth.authorityName;
-          return false;
-        }
-      });
-      that.$store.commit('addTab', {
-        name: name,
-        route: that.$route.path
-      });
-      that.$router.push({
-        name: name,
-        path: that.$route.path
-      });
-      that.$store.commit('setActiveTab', that.$route.path);
     }
+    // if (that.$route.path === '/dashBoard' || that.$route.path === '/') {
+    //   that.$router.push({
+    //     name: '主页',
+    //     path: '/dashBoard'
+    //   });
+    //   that.$store.commit('setActiveTab', '/dashBoard');
+    // } else {
+    //   let name = '';
+    //   that.$store.state.auths.forEach(auth => {
+    //     if (auth.authorityHtmlElement && (auth.authorityHtmlElement.split('.')[0] === that.$route.path.split('/').pop())) {
+    //       name = auth.authorityName;
+    //       return false;
+    //     }
+    //   });
+    //   that.$store.commit('addTab', {
+    //     name: name,
+    //     route: that.$route.path
+    //   });
+    //   that.$router.push({
+    //     name: name,
+    //     path: that.$route.path
+    //   });
+    //   that.$store.commit('setActiveTab', that.$route.path);
+    // }
   },
   methods: {
     handleClick(tab) {

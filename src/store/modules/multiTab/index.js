@@ -1,6 +1,6 @@
 exports.state = {
   tabs: [],
-  activeTab: 'dashBoard'
+  activeTab: ''
 };
 
 exports.mutations = {
