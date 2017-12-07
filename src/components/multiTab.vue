@@ -7,6 +7,7 @@
           <keep-alive>
             <router-view v-if="$route.meta.keepAlive"></router-view>
           </keep-alive>
+          <router-view v-if="!$route.meta.keepAlive"></router-view>
         </el-tab-pane>
       </el-tabs>
     </div>
@@ -14,8 +15,10 @@
 </template>
 <script>
 import leftSideBar from './multiTab';
+import mixins from '../globalMixin.js';
 export default {
   name: 'multiTab',
+  mixins: [mixins],
   components: {
     'leftSideBar': leftSideBar
   },

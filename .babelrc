@@ -6,6 +6,7 @@
     "production":
     {
       "plugins": [
+        ["syntax-dynamic-import"],
         ["transform-runtime",
         {
           "polyfill": false,

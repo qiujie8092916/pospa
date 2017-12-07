@@ -11,14 +11,14 @@
         <template v-for="x in auths">
           <template v-if="!x.hasChild">
             <el-menu-item :key="x.id" :index="x.authorityCode">
-              <router-link :to="'/' + x.authorityHtmlElement.substring(0, x.authorityHtmlElement.indexOf('.'))">{{x.authorityName}}</router-link>
+              <router-link :to="{name: x.authorityName}">{{x.authorityName}}</router-link>
             </el-menu-item>
           </template>
           <template v-else>
-            <el-submenu v-if="!x.parentOrderNum && !contains(noNeedNav, x.orderNum)" :key="x.id" :index="x.authorityCode">
+            <el-submenu v-if="!x.parentOrderNum && !noNeedNav.contains(x.orderNum)" :key="x.id" :index="x.authorityCode">
               <template slot="title" style="height: calc(100% - 1px);">{{x.authorityName}}</template>
               <el-menu-item v-for="y in auths" v-if="y.authorityHtmlElement && x.orderNum === y.parentOrderNum" :key="y.id" :index="y.authorityCode">
-                <router-link :to="'/' + y.authorityHtmlElement.substring(0, y.authorityHtmlElement.indexOf('.'))">{{y.authorityName}}</router-link>
+                <router-link :to="{name: y.authorityName}">{{y.authorityName}}</router-link>
               </el-menu-item>
             </el-submenu>
           </template>
@@ -71,15 +71,6 @@ export default {
     }
   },
   methods: {
-    contains(arr, obj) {
-      let i = arr.length;
-      while (i--) {
-        if (arr[i] === obj) {
-          return true;
-        }
-      };
-      return false;
-    },
     handleNavClick(key) {
       let name = '',
         path = '/';
