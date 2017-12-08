@@ -1,6 +1,65 @@
 import $ from 'jquery';
+import axios from 'axios';
+
 export default {
   methods: {
+    /* apis , fn */
+    rpc: function(apis, fn) {
+      var setupApis = [];
+      var that = this;
+      apis.forEach(function(api) {
+        setupApis.push(that.rpcsetup(api));
+      });
+      axios.all(setupApis)
+        .then(axios.spread(function() {
+          fn(([].slice.call(arguments)).map(function(arg) {
+            return arg.data.result;
+          }), ([].slice.call(arguments)).map(function(arg) {
+            return arg.data.error;
+          }));
+        }));
+      // var xhr = new XMLHttpRequest();
+      // xhr.onreadystatechange = function() {
+      //   if (xhr.readyState === 4) {
+      //     if ((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304) {
+      //       console.log('successful: ' + xhr.status);
+      //     } else {
+      //       console.log('Request was unsuccessful: ' + xhr.status);
+      //     }
+      //   }
+      // };
+      // xhr.open('post', 'https://icepointcloud.com/gateway/api/jsonrpc.jsp');
+      // xhr.setRequestHeader('icepoint_from', 'admin');
+      // xhr.send({
+      //   query: JSON.stringify({
+      //     jsonrpc: '2.0',
+      //     method: 'bizadmin.listStoreOrRepositoryByCompanyId',
+      //     id: String(new Date().getTime()),
+      //     params: [{
+      //       'isRepository': false
+      //     }]
+      //   })
+      // });
+    },
+    rpcsetup: function(api) {
+      let config = {
+        method: 'post',
+        url: 'http://localhost:8080//data/post',
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+        headers: {
+          'icepoint_from': 'admin'
+        },
+        responseType: 'json',
+        query: {
+          jsonrpc: '2.0'
+        }
+      };
+      config.query.method = api.method;
+      config.query.id = String(new Date().getTime());
+      config.query.params = api.params;
+      config.data = 'query=' + encodeURIComponent(JSON.stringify(config.query));
+      return axios(config);
+    },
     has: function(field, _empty) {
       var empty = _empty || false; // empty 布尔值，判断是否判断“”值
       if (empty) {
