@@ -2,6 +2,17 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 /*
   覆盖../theme/element-variables.scss主题变量
 */
@@ -24,26 +35,32 @@ $--font-path: '../fonts';
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 /*
   覆盖Element样式表  
 */
 
 .el-tabs__item {
   font-weight: 400;
+  font-size: 12px;
+  height: 25px;
+  line-height: 25px;
 }
 
 .el-menu--horizontal {
-  .el-menu-item {
-    height: 40px;
-    line-height: 40px;
-  }
   .el-submenu {
-    .el-submenu__title {
-      height: 40px;
-      line-height: 40px;
-    }
     &>.el-menu {
-      top: 45px;
+      top: 30px;
     }
   }
 }
@@ -63,4 +80,16 @@ $--font-path: '../fonts';
       // height: 100%;
     }
   }
+}
+
+.el-menu-item {
+  height: 25px !important;
+  line-height: 25px !important;
+  font-size: 12px !important;
+}
+
+.el-submenu__title {
+  height: 25px !important;
+  line-height: 25px !important;
+  font-size: 12px !important;
 }

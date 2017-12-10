@@ -1181,7 +1181,7 @@ html {
 
 body {
   font-family: "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.42857143;
   color: #666;
   background-color: #fff;
@@ -3227,6 +3227,7 @@ fieldset[disabled] .checkbox label {
 
 
 
+
 /********qj:20170316***********/
 
 .font-white {
@@ -3258,6 +3259,7 @@ font.must {
   font-size: 18px;
   vertical-align: top;
 }
+
 
 
 
@@ -4311,6 +4313,7 @@ tbody.collapse.in {
   -webkit-box-shadow: none;
   box-shadow: none
 }
+
 
 
 
@@ -7722,6 +7725,7 @@ button.close {
 t {
   display: none !important
 }
+
 
 
 

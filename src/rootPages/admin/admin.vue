@@ -1,10 +1,10 @@
 <template>
   <el-container style="height:100%">
-    <el-header style="height:41px;">
-      <router-link to="/home" class="navbar-brand pull-left pln">
+    <el-header style="height:26px;">
+      <!-- <router-link to="/home" class="navbar-brand pull-left pln">
         <img alt="icepointcloud-logo" src="https://storage.icepointcloud.com//8cce867937cba010627a503748e6aa2b/20171012/659aa202-9edb-43fd-8c9e-b83e1aaf22858996416171504304110.png-jpg" width="85" />
-      </router-link>
-      <el-menu :default-active="activeHeader" class="el-menu pull-left" mode="horizontal" @select="handleNavClick">
+      </router-link> -->
+      <el-menu router menu-trigger="click" :default-active="activeHeader" class="el-menu pull-left" mode="horizontal" @select="handleNavClick">
         <el-menu-item index="dashBoard">
           <router-link to="/dashBoard">主页</router-link>
         </el-menu-item>
@@ -89,18 +89,12 @@ export default {
   },
   methods: {
     handleNavClick(key) {
-      let name = '',
-        path = '/';
-      this.$store.state.auths.forEach(auth => {
-        if (auth.authorityCode === key) {
-          name = auth.authorityName;
-          path += auth.authorityHtmlElement.split('.')[0];
-          return false;
-        }
+      let auth = this.$store.state.auths.filter(auth => {
+        return auth.authorityCode === key;
       });
       this.$router.push({
-        name: name,
-        path: path
+        name: auth[0].authorityName,
+        path: auth[0].authorityHtmlElement.split('.')[0]
       });
     }
   }

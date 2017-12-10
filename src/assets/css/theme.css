@@ -18,7 +18,7 @@ body {
   color: #666666;
   font-weight: 400;
   font-size-adjust: 100%;
-  font-size: 13px;
+  font-size: 12px;
   font-family: 'Microsoft YaHei', 'Open Sans', Helvetica, Arial, sans-serif;
   line-height: 1.475;
   -webkit-font-smoothing: antialiased;
@@ -75,6 +75,7 @@ a:hover,
 a:focus {
   text-decoration: none;
 }
+
 
 
 /* a:hover {
@@ -309,6 +310,7 @@ hr.tall {
 }
 
 
+
 /* Navbar Left Divider */
 
 .navbar-divider {
@@ -319,6 +321,7 @@ hr.tall {
   height: 30px;
   border-left: 1px solid #ebebeb;
 }
+
 
 
 /* Left Side Menus */
@@ -354,6 +357,7 @@ hr.tall {
 }
 
 
+
 /* Settings Menu */
 
 #settings_menu {
@@ -373,6 +377,7 @@ hr.tall {
 }
 
 
+
 /* Language Menu */
 
 #language_menu {
@@ -385,11 +390,13 @@ hr.tall {
 }
 
 
+
 /* Language Menu Text */
 
 #language_menu a>span {
   color: #a287d4;
 }
+
 
 
 /* Language Menu Icon */
@@ -400,12 +407,14 @@ hr.tall {
 }
 
 
+
 /* Right Navbar Container */
 
 .navbar-right {
   float: right;
   width: 410px;
 }
+
 
 
 /* Header Search Area */
@@ -442,6 +451,7 @@ hr.tall {
 }
 
 
+
 /* Navbar Menus */
 
 .navbar-menus {
@@ -465,6 +475,7 @@ hr.tall {
 }
 
 
+
 /* Reduces the size of the Right SideMenu Toggle button */
 
 .navbar-menus>.btn-group:last-child {
@@ -486,6 +497,7 @@ hr.tall {
 }
 
 
+
 /* Header Menu Number Text */
 
 .navbar-menus>.btn-group>button>b {
@@ -504,6 +516,7 @@ hr.tall {
 }
 
 
+
 /* Header Button Dropdowns */
 
 .navbar-menus ul.dropdown-menu,
@@ -516,6 +529,7 @@ hr.tall {
   border-color: #e5e5e5;
   font-size: 13px;
 }
+
 
 
 /* Header Menu Dropdown - Header */
@@ -531,6 +545,7 @@ hr.tall {
   font-weight: 500;
   font-size: 13px;
 }
+
 
 
 /* Header Bar Dropdowns Arrows */
@@ -573,6 +588,7 @@ hr.tall {
 }
 
 
+
 /* Header Menu Dropdown - Sub Header */
 
 .dropdown-submenu {
@@ -604,6 +620,7 @@ hr.tall {
 }
 
 
+
 /* firefox 19+ */
 
 .dropdownSearch:-ms-input-placeholder {
@@ -613,6 +630,7 @@ hr.tall {
 }
 
 
+
 /* ie */
 
 .dropdownSearch:-moz-placeholder {
@@ -620,6 +638,7 @@ hr.tall {
   font-weight: 600;
   font-size: 13px;
 }
+
 
 
 /* Header Menu Dropdown - Footer */
@@ -650,6 +669,7 @@ hr.tall {
 }
 
 
+
 /* Dropdown Checklist Toggle - The Task menu is a clickable checklist */
 
 .task-checked>div:not(.item-checkbox) {
@@ -657,11 +677,13 @@ hr.tall {
 }
 
 
+
 /* add a text line through effect on any clickable checklist by adding ".text-slash" */
 
 .task-checked .text-slash {
   text-decoration: line-through;
 }
+
 
 
 /* Removes borders from Nav-Tabs that are placed in header dropdowns */
@@ -675,6 +697,7 @@ hr.tall {
   padding: 10px 27px;
   border-color: #DDD;
 }
+
 
 
 /* Navbar Tickets Dropdown */
@@ -699,6 +722,7 @@ hr.tall {
 }
 
 
+
 /* Navbar Todo-List Dropdown */
 
 .todo-body {
@@ -716,6 +740,7 @@ hr.tall {
 //     background-image: url(../img/plugins/handle.png);
 
 }
+
 /* ==============================================
    A. LEFT SIDEBAR
     A. Default Open State
@@ -741,6 +766,7 @@ hr.tall {
 .sidebar-menu {
   padding-bottom: 20px;
 }
+
 /* TOP LEVEL MENU ITEM */
 
 /* Menu Item */
@@ -762,6 +788,7 @@ hr.tall {
   font-size: 14px;
   line-height: 50px;
 }
+
 /* Menu Icon */
 .sidebar-menu>ul>li>a>span:nth-child(1) {
   top: 0;
@@ -773,11 +800,13 @@ hr.tall {
   font-size: 13px;
   line-height: 40px;
 }
+
 /* Menu Title */
 .sidebar-menu>ul>li>a>span:nth-child(2) {
   float: left;
   padding-left: 12px;
 }
+
 /* Top Level Menu Item - Tray, used to hold badges and such */
 .sidebar-menu>ul>li>a>.sidebar-title-tray {
   position: absolute;
@@ -788,6 +817,7 @@ hr.tall {
   padding: .0em .5em .2em;
   font-size: 11px;
 }
+
 /* Menu Caret */
 .sidebar-menu ul>li>a>i.fa {
   position: absolute;
@@ -813,6 +843,7 @@ hr.tall {
   transform: rotate(0deg);
   -ms-transform: rotate(0deg);
 }
+
 /* Open Menu Item Caret - we simply flip the carets border */
 .sidebar-menu ul>li>a.menu-open>span.caret {
   /* border-top: 0; */
@@ -820,6 +851,7 @@ hr.tall {
 
   transform: rotate(180deg);
 }
+
 /* SUB LEVEL MENU ITEMS */
 
 /* Sub-Menu */
@@ -842,11 +874,13 @@ hr.tall {
 .sidebar-menu ul.sub-nav>li>a {
   padding: 10px 20px 11px 50px;
 }
+
 /* Sub-Menu Icon */
 .sidebar-menu ul.sub-nav>li>a>span:nth-child(1) {
   margin-right: 10px;
   font-size: 11px;
 }
+
 /* Sidebar Menu "li" Divider - Used in the resources menu */
 .sidebar-menu ul li.divider {
   margin: 0 auto;
@@ -861,6 +895,7 @@ hr.tall {
 .sidebar-menu ul.sub-nav li.active a {
   color: #75BCF5;
 }
+
 /*===============================================
   B. Sidebar User Area
 ================================================= */
@@ -874,6 +909,7 @@ hr.tall {
   /* border-top: 1px solid transparent; */
   /* border-bottom: 1px dashed #e5e5e5; */
 }
+
 /* User Area - Avatar */
 .user-info .media-object {
   /* border-color: #c7b7e5; */
@@ -882,6 +918,7 @@ hr.tall {
 .user-info .media-object img {
   max-width: 50px;
 }
+
 /* User Area Mobile Link - Replaces ".media-body" with single Icon for Mobile Devices */
 .user-info .mobile-link {
   display: none;
@@ -904,6 +941,7 @@ hr.tall {
 .user-info.usermenu-open .media-object {
   border-color: #a287d4;
 }
+
 /* User Area Menu - A slide down user menu */
 .user-menu {
   position: relative;
@@ -916,6 +954,7 @@ hr.tall {
   border-right: 1px solid #d6d6d6;
   background: #f8f8f8;
 }
+
 /* User Area Menu - bottom border(hidden on mobile) */
 .user-menu:after {
   position: absolute;
@@ -946,6 +985,7 @@ hr.tall {
   border-bottom: 1px solid #CCC;
   background: #e5e5e5;
 }
+
 /*===============================================
   C. Sidebar Item State
 ================================================= */
@@ -957,18 +997,22 @@ hr.tall {
 
   color: #75BCF5;
 }
+
 /* Sub-Menu Level Item - BG color:hover */
 .sidebar-menu ul.sub-nav>li>a:hover {
   color: #75BCF5;
 }
+
 /* Top Level Menu Item - Icon Color */
 .sidebar-menu>ul>li.active>a>span:nth-child(1) {
   color: #75BCF5;
 }
+
 /* Sub-Menu Level Item - Icon Color */
 .sidebar-menu ul.sub-nav>li.active>a>span:nth-child(1) {
   color: #a287d4;
 }
+
 /* Active Menu item Caret */
 .sidebar-menu ul>li.active>a>span.caret {
   color: #75BCF5;
@@ -981,6 +1025,7 @@ hr.tall {
 .sidebar-menu ul>li.active>a {
   color: #75BCF5;
 }
+
 /* .side_arrow{
   position: absolute; */
 
@@ -1004,6 +1049,7 @@ hr.tall {
     margin-left: 0;
   }
 }
+
 /*====================================================
   E. Sidebar Toggle - User input
 ====================================================== */
@@ -1029,6 +1075,7 @@ hr.tall {
     margin-left: 0;
   }
 }
+
 /* Right SideBar */
 .sidebar-rtl #sidebar_left {
   left: -230px;
@@ -1055,6 +1102,7 @@ hr.tall {
     margin-left: 0;
   }
 }
+
 /* No SideBar */
 .sidebar-hidden #sidebar_left {
   left: -230px;
@@ -1063,6 +1111,7 @@ hr.tall {
 .sidebar-hidden #content_wrapper {
   margin-left: 0;
 }
+
 /*====================================================
   E. Custom Menu -  Email Menu
 ====================================================== */
@@ -1102,6 +1151,7 @@ hr.tall {
   color: #555;
   cursor: pointer;
 }
+
 /*===============================================
    B. Right SideMenu
 ================================================= */
@@ -1131,6 +1181,7 @@ hr.tall {
 body.sidebar-right-open #sidebar_right {
   right: 0;
 }
+
 /*===============================================
    C. Topbar
 ================================================= */
@@ -1173,6 +1224,7 @@ body.sidebar-right-open #sidebar_right {
   color: #555;
   font-size: 18px;
 }
+
 /* ================================================
    III. PANELS
     A. Heading
@@ -1195,6 +1247,7 @@ body.sidebar-right-open #sidebar_right {
   border-color: #e5e5e5;
   border-radius: 2px;
 }
+
 /* panel helper class */
 .panel-overflow {
   overflow: hidden;
@@ -1238,6 +1291,7 @@ body.sidebar-right-open #sidebar_right {
 .panel-body {
   position: relative;
 }
+
 /* Colored headers - via bg-* classes */
 .panel-heading[class*='bg-'] {
   margin: -1px;
@@ -1258,6 +1312,7 @@ body.sidebar-right-open #sidebar_right {
 
   background-color: #fff;
 }
+
 /*===============================================
   B. Panel Addon - Menu
   -----------------------------------------------
@@ -1274,6 +1329,7 @@ body.sidebar-right-open #sidebar_right {
   background-color: #FFF;
   box-shadow: none;
 }
+
 /*===============================================
   C. Panel Addon - Sidemenu
   -----------------------------------------------
@@ -1320,6 +1376,7 @@ body.sidebar-right-open #sidebar_right {
   height: 1px;
   background: #e2e2e2;
 }
+
 /*===============================================
   D. Panel Addon - Tray
   -----------------------------------------------
@@ -1368,6 +1425,7 @@ body.sidebar-right-open #sidebar_right {
   text-align: center;
   font-size: 16px;
 }
+
 /*===============================================
   E. PANEL TABS
   -----------------------------------------------
@@ -1400,6 +1458,7 @@ body.sidebar-right-open #sidebar_right {
 .panel-tabs>li>a:hover {
   background-color: transparent;
 }
+
 /* hover and active states */
 .panel-tabs>li.active>a,
 .panel-tabs>li.active>a:hover,
@@ -1419,6 +1478,7 @@ body.sidebar-right-open #sidebar_right {
   background: #428bca;
   content: "";
 }
+
 /* PANEL TAB CORRECTION */
 
 /* If you want a panel-like footer inside a tababble
@@ -1435,6 +1495,7 @@ body.sidebar-right-open #sidebar_right {
   border-bottom-left-radius: 3px;
   background-color: #f5f5f5;
 }
+
 /*===============================================
   F. Accordion 
   -----------------------------------------------
@@ -1448,6 +1509,7 @@ body.sidebar-right-open #sidebar_right {
 .accordion.panel-group .panel+.panel {
   margin-top: 10px;
 }
+
 /* Accordion Header */
 .accordion .panel-heading a {
   display: block;
@@ -1457,11 +1519,13 @@ body.sidebar-right-open #sidebar_right {
 .accordion .panel-heading a:hover {
   color: inherit;
 }
+
 /* Accordion Widget Toggle Arrows */
 .accordion .accordion-toggle-icon {
   padding: 12px 12px 7px;
   font-size: 18px;
 }
+
 /* Accordion Toggle Arrow States */
 .accordion .accordion-toggle-icon i:first-child {
   display: block;
@@ -1478,6 +1542,7 @@ body.sidebar-right-open #sidebar_right {
 .accordion .collapsed .accordion-toggle-icon i:last-child {
   display: block;
 }
+
 /*===============================================
   G. Alternate Panel Styles
 ================================================= */
@@ -1503,6 +1568,7 @@ body.sidebar-right-open #sidebar_right {
   background-color: #fcfcfc;
   line-height: 22px;
 }
+
 /* ==============================================
    IV. THEME ELEMENTS
     A. Icons
@@ -1539,6 +1605,7 @@ body.sidebar-right-open #sidebar_right {
 .wf-loading .iconsweets {
   opacity: 0 !important;
 }
+
 /* Icon Transitions */
 .glyphicon,
 .glyphicons,
@@ -1550,6 +1617,7 @@ body.sidebar-right-open #sidebar_right {
   -moz-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in;
 }
+
 /* Glyphicon Pro and Halfling */
 .glyphicons-2x,
 .glyphicon-2x {
@@ -1570,6 +1638,7 @@ body.sidebar-right-open #sidebar_right {
 .glyphicon-5x {
   font-size: 5em;
 }
+
 /* Icomoon Font Icons */
 .imoon-2x {
   font-size: 2em;
@@ -1586,6 +1655,7 @@ body.sidebar-right-open #sidebar_right {
 .imoon-5x {
   font-size: 5em;
 }
+
 /* IconSweets2 Font Icons */
 .iconsweets-2x {
   font-size: 2em;
@@ -1602,6 +1672,7 @@ body.sidebar-right-open #sidebar_right {
 .iconsweets-5x {
   font-size: 5em;
 }
+
 /* Buttons with Icons 
 * Cross browser problems were creating problems when
 * an icon was given a larger font size than its sibling
@@ -1614,6 +1685,7 @@ body.sidebar-right-open #sidebar_right {
   /* font-size: 1.1em; */
   /* line-height: 0; */
 }
+
 /* A Helper Class to Align Icons Right in Control-forms */
 span.field-icon-right,
 i.field-icon-right {
@@ -1621,6 +1693,7 @@ i.field-icon-right {
   top: 8px;
   right: 10px;
 }
+
 /* Icon Background and Borders 
 * properly align icons that have been placed inside of titles
 * Useful for matching icon size to adjacent text 
@@ -1638,6 +1711,7 @@ i.field-icon-right {
   padding: 9px;
   border-radius: 4px;
 }
+
 /* Icon Background Sizes */
 .icon-circle.glyphicon-2x,
 .icon-circle.glyphicons-2x {
@@ -1668,6 +1742,7 @@ i.field-icon-right {
 .icon-square.glyphicons-4x {
   padding: 35px;
 }
+
 /* WIDGET SPECIFIC ICON STYLING
 * ALL elements which use icons have been
 * moved from their respective positions
@@ -1679,6 +1754,7 @@ i.field-icon-right {
   vertical-align: middle;
   font-size: 15px;
 }
+
 /* Special on-hover styles for user dropdown menu */
 .user-menu ul.dropdown-items>li:hover .glyphicon {
   color: #d9534f;
@@ -1691,6 +1767,7 @@ i.field-icon-right {
 .user-menu ul.dropdown-items>li:last-child>div:hover .glyphicon {
   color: #d9534f;
 }
+
 /* Panel Heading Icon */
 .panel-heading .panel-title>.glyphicon,
 .panel-heading .panel-title>.glyphicons {
@@ -1698,6 +1775,7 @@ i.field-icon-right {
   padding-right: 8px;
   font-size: 14px;
 }
+
 /* Breadcrumb "Home" Icon */
 .breadcrumb .glyphicon,
 .breadcrumb .glyphicons {
@@ -1706,6 +1784,7 @@ i.field-icon-right {
   color: #777;
   font-size: 11px;
 }
+
 /* Panel Sidemenu Icons */
 .panel-sidemenu ul.nav li.active .fa {
   color: #33bfeb;
@@ -1720,6 +1799,7 @@ i.field-icon-right {
   color: #BBB;
   font-size: 18px;
 }
+
 /* Panel Tabs Icons */
 .panel-tabs li .glyphicon,
 .panel-tabs li .glyphicons,
@@ -1732,6 +1812,7 @@ i.field-icon-right {
   vertical-align: middle;
   font-size: 14px;
 }
+
 /* Mildly styles a font awesome based icon group
  * used in occasionaly in panel heading. Look at 
  * message widget on index.html for example */
@@ -1743,6 +1824,7 @@ i.field-icon-right {
   font-size: 16px;
   cursor: pointer;
 }
+
 /* Pricing Table Icons */
 .pricing-tables .pricing-icons li .fa-times {
   color: #e74a4a;
@@ -1751,6 +1833,7 @@ i.field-icon-right {
 .pricing-tables .pricing-icons li .fa-ellipsis-h {
   color: #555555;
 }
+
 /* Tab Navigation Icons */
 .nav-tabs li .fa {
   font-size: 14px;
@@ -1759,6 +1842,7 @@ i.field-icon-right {
 .nav-tabs li .fa.fa-caret-down {
   font-size: 12px;
 }
+
 /* Timeline Widget Icons */
 .timeline-widget span.glyphicons {
   position: relative;
@@ -1778,6 +1862,7 @@ i.field-icon-right {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80ffffff', endColorstr='#00ffffff', GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
+
 /* Flag Icons */
 .flag-xs,
 .flag-sm,
@@ -1843,6 +1928,7 @@ i.field-icon-right {
 .flag-xs.flag-us {
   background-position: 0 -68px;
 }
+
 /*===============================================
   B. Labels
 ================================================= */
@@ -1852,6 +1938,7 @@ i.field-icon-right {
   font-size: 84%;
   line-height: 24px;
 }
+
 /* Label Sizes - ".label" required */
 .label-sm {
   padding: .1em .65em .2em;
@@ -1862,6 +1949,7 @@ i.field-icon-right {
   padding: .4em .9em .5em;
   font-size: 95%;
 }
+
 /* Label Shapes - ".label" required */
 .label.label-rounded {
   padding: .2em 0.85em .3em;
@@ -1875,12 +1963,14 @@ i.field-icon-right {
 .label-lg.label-rounded {
   padding: .4em .9em .5em;
 }
+
 /* Custom Bootstrap Label */
 label.error {
   color: #d9534f;
   font-weight: 600;
   font-size: 12px;
 }
+
 /*===============================================
   C. Badges
 ================================================= */
@@ -1889,6 +1979,7 @@ label.error {
   font-weight: 600;
   font-size: 12px;
 }
+
 /* Badge Sizes - ".badge" required */
 .badge-sm {
   padding: 2px 6px;
@@ -1898,6 +1989,7 @@ label.error {
 .badge-lg {
   padding: 4px 8px;
 }
+
 /*===============================================
   D. Alerts
 ================================================= */
@@ -1915,10 +2007,12 @@ label.error {
   padding: 25px 35px 25px 15px;
   font-size: 16px;
 }
+
 /* Alert Dismiss Icon */
 .alert-dismissable .close {
   color: #666666;
 }
+
 /*===============================================
   E. Media Objects 
 ================================================= */
@@ -1942,6 +2036,7 @@ label.error {
 .media-heading small {
   font-size: 11px;
 }
+
 /*===============================================
   F. Thumbnails 
 ================================================= */
@@ -1970,6 +2065,7 @@ label.error {
 .thumbnail.rounded {
   border-radius: 64px;
 }
+
 /*===============================================
   G. Buttons
 ================================================= */
@@ -2005,11 +2101,13 @@ label.error {
 .btn-link:hover {
   color: #444444;
 }
+
 /* Button Sizes */
 .btn-xs {
   padding: 2px 6px;
   border-radius: 2px;
 }
+
 /* .btn-sm {
   line-height: 1.5; */
 
@@ -2018,10 +2116,12 @@ label.error {
 .btn-lg {
   line-height: 1.33;
 }
+
 /* Button Shapes */
 .btn-square {
   border-radius: 0;
 }
+
 /* Button Colors 
 * These are only colors that follow Bootstraps
 * color scheme. Fusion includes many more colors
@@ -2062,6 +2162,7 @@ label.error {
 .bg-default.bg-gradient {
   background-color: #f0f0f0;
 }
+
 /* Adds a custom "Alert"(purple) button to 
  * the Bootstrap button lineup */
 .btn-alert {
@@ -2075,6 +2176,7 @@ label.error {
 .btn-alert .caret {
   border-top-color: white;
 }
+
 /* Button Hover effect */
 .btn:hover {
   /* background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.13) 1%, rgba(255, 255, 255, 0.13) 100%); */
@@ -2087,6 +2189,7 @@ label.error {
   background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.45) 1%, rgba(255, 255, 255, 0.15) 100%);
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.45) 1%, rgba(255, 255, 255, 0.15) 100%);
 }
+
 /* Button Gradients 
  * Gradients are created using a transparent gradient 
  * overlay. This way you can transform any element 
@@ -2104,6 +2207,7 @@ label.error {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80ffffff', endColorstr='#00ffffff', GradientType=0);
 }
+
 /* Custom Themed Button group using all default bootstrap classes */
 .btn-group.btn-group-themed .btn-default:hover,
 .btn-group.btn-group-themed .btn-default:focus,
@@ -2115,6 +2219,7 @@ label.error {
   box-shadow: none;
   color: #6b3fa2;
 }
+
 /* Button Dropdown Menu Sizes */
 .dropdown-menu.dropdown-sm {
   min-width: 120px;
@@ -2128,6 +2233,7 @@ label.error {
   padding: 2px 12px;
   font-size: 13px;
 }
+
 /*===============================================
   H. Progress Bars
 ================================================= */
@@ -2140,6 +2246,7 @@ label.error {
 .progress-bar {
   line-height: 18px;
 }
+
 /* Progress Bar Sizes - ".progress" always required */
 .progress.progress-sm {
   height: 12px;
@@ -2157,6 +2264,7 @@ label.error {
 .progress.progress-lg .progress-bar {
   line-height: 28px;
 }
+
 /*===============================================
   I. Field Elements
 ================================================= */
@@ -2165,6 +2273,7 @@ label.error {
 select {
   cursor: pointer;
 }
+
 /* Bootstrap Help Block */
 .help-block {
   margin-top: 7px;
@@ -2176,10 +2285,12 @@ select {
 .checkbox-inline {
   line-height: 20px;
 }
+
 /* Input Label  */
 label {
   font-weight: 400;
 }
+
 /* Input Design 
 .form-control {
   box-shadow: none; */
@@ -2225,6 +2336,7 @@ label {
 .text-align-center-child .form-control {
   display: inline-block;
 }
+
 /* Input Addon */
 .input-group-addon {
   min-width: 40px;
@@ -2233,11 +2345,13 @@ label {
   background-color: #fafafa;
   color: #ddd;
 }
+
 /* Input Focus */
 .form-control:focus {
   border-color: #75BCF5 !important;
   box-shadow: none;
 }
+
 /* Disabled Input */
 .form-control[disabled],
 .form-control[readonly],
@@ -2245,6 +2359,7 @@ fieldset[disabled] .form-control {
   background-color: #fafafa !important;
   font-weight: 400;
 }
+
 /* Alternate Text Field Style - Gradient */
 .text-field-alt {
   min-height: 40px;
@@ -2260,6 +2375,7 @@ fieldset[disabled] .form-control {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80ffffff', endColorstr='#00ffffff', GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
+
 /*===============================================
   J. Checkboxes - Custom Fusion exlcusive
                   pure CSS Checkboxes
@@ -2343,6 +2459,7 @@ fieldset[disabled] .form-control {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
 }
+
 /* Checkboxes - Custom Colors */
 .cBox.facebook-bg label:before {
   background-color: #9de0f5;
@@ -2359,6 +2476,7 @@ fieldset[disabled] .form-control {
 .cBox.instagram-bg label:before {
   background-color: #fbb882;
 }
+
 /*===============================================
   K. Switches - Created with pure CSS
 ================================================= */
@@ -2431,6 +2549,7 @@ div.switch label:after {
 div.switch input:checked+label {
   background: #2ba6cb;
 }
+
 /* Switch Sizes */
 div.switch.switch-lg label {
   width: 65px;
@@ -2481,6 +2600,7 @@ div.switch.radius label {
 div.switch.radius label:after {
   border-radius: 3px;
 }
+
 /* Switch Option - Rounded */
 div.switch.round {
   border-radius: 1000px;
@@ -2493,6 +2613,7 @@ div.switch.round label {
 div.switch.round label:after {
   border-radius: 26px;
 }
+
 /* Switch Option - Inline */
 .switch.switch-inline {
   display: inline-block;
@@ -2501,6 +2622,7 @@ div.switch.round label:after {
 .switch.switch-inline+.switch.switch-inline {
   margin-left: 15px;
 }
+
 /*===============================================
   L. Tables
 ================================================= */
@@ -2509,6 +2631,7 @@ div.switch.round label:after {
 .table tbody>tr:first-child>td {
   border-top: 0;
 }
+
 /* Table-striped item changes */
 .table-striped>tbody>tr:nth-child(even)>td {
   padding: 8px;
@@ -2521,6 +2644,7 @@ div.switch.round label:after {
   border-bottom: 1px dashed #c9c9c9;
   background-color: #FFF;
 }
+
 /* Rounded */
 .table-curved>tbody>tr>td:first-child {
   border-radius: 4px 0 0 4px;
@@ -2529,6 +2653,7 @@ div.switch.round label:after {
 .table-curved>tbody>tr>td:last-child {
   border-radius: 0 4px 4px 0;
 }
+
 /*===============================================
   M. Pricing Tables
 ================================================= */
@@ -2542,6 +2667,7 @@ div.switch.round label:after {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
+
 /* Pricing Table Title */
 .pricing-tables .pricing-title {
   padding: 25px 5px 20px;
@@ -2555,6 +2681,7 @@ div.switch.round label:after {
   font-weight: 200;
   font-size: 26px;
 }
+
 /* Pricing Table Cost Figure */
 .pricing-info {
   margin: 20px 0;
@@ -2584,6 +2711,7 @@ div.switch.round label:after {
   color: #888;
   font-weight: 200;
 }
+
 /* Pricing Table Item Features */
 .pricing-features ul {
   margin: 0;
@@ -2609,6 +2737,7 @@ div.switch.round label:after {
   color: #777;
   font-size: 15px;
 }
+
 /* Pricing Table Icons */
 .pricing-tables .pricing-icons ul {
   margin: 0;
@@ -2623,11 +2752,13 @@ div.switch.round label:after {
   background-color: #FFF;
   font-size: 18px;
 }
+
 /* Pricing Table Sign Up Button*/
 .pricing-tables a.btn {
   margin-top: 25px;
   padding: 8px 26px;
 }
+
 /* Hero Pricing Plan Modifications */
 .hero-plan {
   z-index: 10;
@@ -2662,6 +2793,7 @@ div.switch.round label:after {
 .hero-plan .pricing-plan a.btn {
   margin: 40px 0 20px;
 }
+
 /*===============================================
   N. Tabs
 ================================================= */
@@ -2675,6 +2807,7 @@ div.switch.round label:after {
   overflow: auto;
   background-color: #FFF;
 }
+
 /* TAB CONTENT PANEL */
 .tab-content {
   position: relative;
@@ -2683,6 +2816,7 @@ div.switch.round label:after {
   min-height: 125px;
   border: 1px solid #e5e5e5;
 }
+
 /* TAB NAVIGATION */
 .nav-tabs {
   position: relative;
@@ -2710,6 +2844,7 @@ div.switch.round label:after {
 .nav-tabs>li:first-child>a {
   margin-left: 0;
 }
+
 /* TAB NAVIGATION STATES */
 .nav-tabs>li>a:hover {
   border-color: #e5e5e5;
@@ -2727,6 +2862,7 @@ div.switch.round label:after {
   color: #555555;
   cursor: default;
 }
+
 /* open state for dropdown menus in nav 
  * containers. Also a direct bootstrap override */
 .nav .open>a,
@@ -2735,12 +2871,14 @@ div.switch.round label:after {
   border-color: #e5e5e5;
   color: #428bca;
 }
+
 /* TAB NAVIGATION - ALT STYLE: BORDER */
 .tabs-border.nav-tabs>li.active>a,
 .tabs-border-bottom .nav-tabs>li.active>a {
   margin-top: -1px;
   border-top: 2px solid #a287d4;
 }
+
 /* TAB NAVIGATION - ALT STYLE: BORDER - BOTTOM */
 .tabs-border-bottom.nav-tabs>li>a,
 .tabs-border-bottom .nav-tabs>li>a {
@@ -2758,6 +2896,7 @@ div.switch.round label:after {
   color: #555;
   font-weight: 600;
 }
+
 /* TAB NAVIGATION - ALT STYLE: BACKGROUND */
 .tabs-bg.nav {
   padding: 10px 10px 0;
@@ -2765,6 +2904,7 @@ div.switch.round label:after {
   border-bottom: none;
   background: #f5f5f5;
 }
+
 /* TABS - Float Right */
 .nav-tabs.tabs-right>li {
   float: right;
@@ -2773,6 +2913,7 @@ div.switch.round label:after {
 .nav-tabs.tabs-right>li:first-child>a {
   margin-right: 0;
 }
+
 /* TABS - NAVIGATION BELOW */
 .tabs-below {
   position: relative;
@@ -2794,6 +2935,7 @@ div.switch.round label:after {
   font-weight: 700;
   font-size: 12px;
 }
+
 /* TAB NAVIGATION STATES */
 .tabs-below>li.active>a,
 .tabs-below>li.active>a:hover,
@@ -2806,12 +2948,14 @@ div.switch.round label:after {
   color: #555555;
   cursor: default;
 }
+
 /* TAB NAVIGATION - ALT STYLE: BORDER */
 .tabs-border.tabs-below>li.active>a,
 .tabs-border .tabs-below>li.active>a {
   margin-bottom: -1px;
   border-bottom: 2px solid #c7b7e5;
 }
+
 /* TAB NAVIGATION - ALT STYLE: BACKGROUND */
 .tabs-bg.tabs-below {
   padding: 0 10px 6px;
@@ -2819,6 +2963,7 @@ div.switch.round label:after {
   border-top: none;
   background: #f5f5f5;
 }
+
 /* TABS - NAVIGATION LEFT */
 .tabs-left {
   float: left;
@@ -2838,6 +2983,7 @@ div.switch.round label:after {
   font-weight: 700;
   font-size: 12px;
 }
+
 /* TAB NAVIGATION STATES */
 .tabs-left>li.active>a,
 .tabs-left>li.active>a:hover,
@@ -2849,12 +2995,14 @@ div.switch.round label:after {
   color: #555;
   cursor: default;
 }
+
 /* TAB NAVIGATION - ALT STYLE: BORDER */
 .tabs-border.tabs-left>li.active>a,
 .tabs-border .tabs-left>li.active>a {
   margin-left: -1px;
   border-left: 2px solid #c7b7e5;
 }
+
 /* WELL TABS - GREY MICRO NAV TABS */
 .well-tabs {
   position: relative;
@@ -2884,6 +3032,7 @@ div.switch.round label:after {
 .well-tabs li.active a {
   background-color: #fff;
 }
+
 /* Same style but inversed colors */
 .well-tabs-inverse li a {
   padding: 6px 8px;
@@ -2902,6 +3051,7 @@ div.switch.round label:after {
   background-color: #e3def8;
   color: #6b3fa2;
 }
+
 /*===============================================
   O. Paginations
 ================================================= */
@@ -2926,11 +3076,13 @@ div.switch.round label:after {
 .pager.pager-lg li>span {
   font-size: 16px;
 }
+
 /* PAGINATIONS */
 .pagination {
   margin: 5px 0;
   cursor: pointer;
 }
+
 /* ROUNDED PAGINATION */
 .pagination-rounded>li:first-child>a {
   border-radius: 50% 0 0 50%;
@@ -2939,6 +3091,7 @@ div.switch.round label:after {
 .pagination-rounded>li:last-child>a {
   border-radius: 0 50% 50% 0;
 }
+
 /* ALT STYLE */
 .pagination-alt>li>a {
   margin: 0 4px;
@@ -2962,6 +3115,7 @@ div.switch.round label:after {
   background-color: #555;
   background-image: none;
 }
+
 /* SIZES FOR ALT STYLE */
 .pagination-alt.pagination-sm>li>a {
   margin: 0 3px;
@@ -2973,17 +3127,20 @@ div.switch.round label:after {
   margin: 0 5px;
   padding: 4px 13px;
 }
+
 /* pagination-alt fixes */
 .pagination-alt.pagination-sm>li:first-child>a,
 .pagination-alt.pagination-lg>li:first-child>a {
   margin-left: 0;
 }
+
 /*===============================================
   P. Bootstrap Modals
 ================================================= */
 .modal-backdrop.in {
   opacity: 0.7;
 }
+
 /* Modal sizes - element always requires
  * default ".modal-dialog" class */
 .modal-dialog-sm {
@@ -2999,6 +3156,7 @@ div.switch.round label:after {
     width: 425px;
   }
 }
+
 /* Modal Header */
 .modal-header {
   position: relative;
@@ -3023,6 +3181,7 @@ div.switch.round label:after {
   border-radius: 0;
   /* background-color: #F8F8F8; */
 }
+
 /*===============================================
   Q. Custom Modals
 ================================================= */
@@ -3055,6 +3214,7 @@ div.switch.round label:after {
   padding: 9px 13px;
   font-size: 13px;
 }
+
 /*===============================================
   R. Content Heading Bar
 ================================================= */
@@ -3064,12 +3224,14 @@ div.switch.round label:after {
   border-radius: 4px;
   background: #f6f6f6;
 }
+
 /*===============================================
   R. Boostrap Popover
 ================================================= */
 .popover {
   z-index: 1100;
 }
+
 /*===============================================
   S. Boostrap List
 ================================================= */
@@ -3077,6 +3239,7 @@ div.switch.round label:after {
 .list-unstyled li {
   margin: 0;
 }
+
 /*=================================================
   v. HELPERS
    A. General
@@ -3099,6 +3262,7 @@ div.switch.round label:after {
 .overflow-h {
   overflow: hidden !important;
 }
+
 /* Center Grid Column Helper */
 .center-column {
   float: none;
@@ -3106,6 +3270,7 @@ div.switch.round label:after {
   margin-right: auto;
   margin-left: auto;
 }
+
 /* Vertical Align Helpers */
 .va-t {
   vertical-align: top !important;
@@ -3122,19 +3287,23 @@ div.switch.round label:after {
 .va-s {
   vertical-align: super !important;
 }
+
 /* Inline Block Helper */
 .ib,
 .inline-object {
   display: inline-block !important;
 }
+
 /* pointer cursor */
 .cursor {
   cursor: pointer !important;
 }
+
 /* Useful for emphasizing a disabled input */
 .option-disabled {
   opacity: 0.6;
 }
+
 /* unstyled input */
 .input-unstyled,
 .input-unstyled:hover,
@@ -3144,6 +3313,7 @@ div.switch.round label:after {
   background: none;
   box-shadow: none;
 }
+
 /*===================================================
   B. Table Layout Helpers - specifically for widgets
 ===================================================== */
@@ -3153,6 +3323,7 @@ div.switch.round label:after {
   width: 100%;
   table-layout: fixed;
 }
+
 /* table-layout helper content */
 .table-layout>div {
   float: none;
@@ -3182,6 +3353,7 @@ div.switch.round label:after {
     display: block;
   }
 }
+
 /*===============================================
   C. Font Size Helpers
 ================================================= */
@@ -3292,6 +3464,7 @@ div.switch.round label:after {
 .fs50 {
   font-size: 50px !important;
 }
+
 /*===============================================
   D. Padding Helpers
 ================================================= */
@@ -3542,6 +3715,7 @@ div.switch.round label:after {
 .pl80 {
   padding-left: 80px !important;
 }
+
 /*===============================================
   E. Margin Helpers
 ================================================= */
@@ -3888,6 +4062,7 @@ div.switch.round label:after {
 .mlr50 {
   margin: 0px 50px !important;
 }
+
 /*===============================================
   F. LineHeight Helpers
 ================================================= */
@@ -3942,6 +4117,7 @@ div.switch.round label:after {
 .lh60 {
   line-height: 60px !important;
 }
+
 /*===============================================
   G. Border Helpers
 ================================================= */
@@ -3966,6 +4142,7 @@ div.switch.round label:after {
 .border-bottom {
   border-bottom: 1px solid #e5e5e5;
 }
+
 /* Border Radius */
 .br0 {
   border-radius: 0px !important;
@@ -4166,6 +4343,7 @@ div.switch.round label:after {
 .bbrr64 {
   border-bottom-right-radius: 64px !important;
 }
+
 /* circle */
 
 /* Border Width */
@@ -4192,10 +4370,12 @@ div.switch.round label:after {
 .bw5 {
   border-width: 5px !important;
 }
+
 /* Border Style */
 .bs-dashed {
   border-style: dotted !important;
 }
+
 /* Disable Border */
 .border-left-none {
   border-left: none !important;
@@ -4216,6 +4396,7 @@ div.switch.round label:after {
 .border-none {
   border: none !important;
 }
+
 /*===============================================
   H. Max Width Helpers
 ================================================= */
@@ -4286,6 +4467,7 @@ div.switch.round label:after {
 .mw320 {
   max-width: 320px !important;
 }
+
 /*===============================================
   H. Height Helpers
 ================================================= */
@@ -4440,6 +4622,7 @@ div.switch.round label:after {
 .wd150 {
   width: 150px !important;
 }
+
 /* ================================================
    VI. WIDGETS
     A. Table Widget
@@ -4462,6 +4645,7 @@ div.switch.round label:after {
   padding: 0;
   border: 0;
 }
+
 /* Table items (labels, badges, progress bars etc) */
 .table-widget .progress {
   margin: 0;
@@ -4473,6 +4657,7 @@ div.switch.round label:after {
 .table-widget .badge {
   margin-right: 7px;
 }
+
 /* Tables with the .table-checklist class become clickable
  * if you want text to have a line-through effect on click
  * add the .text-slash class to the element */
@@ -4483,11 +4668,13 @@ div.switch.round label:after {
 .table-checklist tr.task-checked .text-slash {
   text-decoration: line-through;
 }
+
 /* Table item checked state - class added via JS */
 .table-checklist tr.task-checked .label,
 .table-checklist tr.task-checked .progress {
   opacity: 0.3;
 }
+
 /*===============================================
   D. Search Bar Widget
 ================================================= */
@@ -4528,6 +4715,7 @@ div.switch.round label:after {
   width: 16%;
   font-weight: 600;
 }
+
 /*===============================================
   B. Widget Tile - Full Icon BG
 ================================================= */
@@ -4539,6 +4727,7 @@ div.switch.round label:after {
   line-height: 70px;
   opacity: 0.8;
 }
+
 /*===============================================
   D. Calendar Widget
 ================================================= */
@@ -4636,6 +4825,7 @@ table.fc-header {
 .fc-event-inner {
   padding: 7px;
 }
+
 /* Content Header */
 .fc-content .fc-grid .fc-day-header {
   padding-bottom: 10px;
@@ -4644,10 +4834,12 @@ table.fc-header {
   color: #999;
   font-weight: 600;
 }
+
 /* Content Body/Container */
 .fc-content .fc-grid table tbody {
   background: #FFF;
 }
+
 /* Content Day Number */
 .fc-grid .fc-day-number {
   padding: 5px 11px;
@@ -4655,6 +4847,7 @@ table.fc-header {
   font-weight: 400;
   font-size: 13px;
 }
+
 /* ================================================
    X. PAGES - In Order
       A. Dashboard.html
@@ -4690,6 +4883,7 @@ body.dashboard-page .chat-panel .panel-body {
   overflow-y: scroll;
   max-height: 288px;
 }
+
 /* A slidedown menu used to store
  * multiple Tile widgets  */
 #widget-dropdown {
@@ -4724,6 +4918,7 @@ body.dashboard-page .chat-panel .panel-body {
 .dashboard-widget-tray {
   padding-top: 37px;
 }
+
 /*===============================================
   B. Messages Page
 ================================================= */
@@ -4757,6 +4952,7 @@ body.dashboard-page .chat-panel .panel-body {
   color: #999;
   font-size: 14px;
 }
+
 /* Email Compose */
 .messages-page .note-editor .note-toolbar {
   border: 1px solid #DDD;
@@ -4767,12 +4963,14 @@ body.dashboard-page .chat-panel .panel-body {
   border: 1px solid #DDD;
   border-top: none;
 }
+
 /*===============================================
   B. Editors Page
 ================================================= */
 body.editors-page .panel .panel-heading {
   border-bottom-color: #CCC;
 }
+
 /*===============================================
   C. 404/500.html
 ================================================= */
@@ -4781,6 +4979,7 @@ body.editors-page .panel .panel-heading {
 body.error-page #search-widget {
   background: #f1f1f1;
 }
+
 /* Error text */
 body.error-page .error-icon {
   position: relative;
@@ -4795,6 +4994,7 @@ body.error-page .error-text {
   text-shadow: 0 2px #FFF;
   font-size: 120px;
 }
+
 /*===============================================
   D. Coming-soon.html
 ================================================= */
@@ -4825,6 +5025,7 @@ body.coming-soon-page .panel-title {
 body.coming-soon-page .panel-body {
   padding: 40px 26px;
 }
+
 /*===============================================
   E. Screenlock.html
 ================================================= */
@@ -4884,6 +5085,7 @@ body.screenlock-page .login-alert .alert {
   padding: 7px 13px;
   font-size: 13px;
 }
+
 /*===============================================
   F. Login.html
 ================================================= */
@@ -4919,21 +5121,25 @@ body.login-page .login-alert {
   padding: 9px 13px;
   font-size: 13px;
 }
+
 /*===============================================
   G. Invoice.html
 ================================================= */
 body.invoice-page #invoice-info {
   margin-bottom: 15px;
 }
+
 /* Invoice table */
 body.invoice-page .table-condensed tbody tr td:last-child {
   padding-right: 15px;
   text-align: right;
 }
+
 /* Summary table */
 body.invoice-page #invoice-summary {
   margin: 0;
 }
+
 /* Summary table header */
 body.invoice-page #invoice-summary thead th:first-child {
   padding-right: 55px;
@@ -4945,6 +5151,7 @@ body.invoice-page #invoice-summary thead th:last-child {
   width: 50px;
   font-weight: 400;
 }
+
 /* Summary table rows */
 body.invoice-page #invoice-summary tbody tr td {
   border-top: 0;
@@ -4955,6 +5162,7 @@ body.invoice-page #invoice-summary tbody tr td:first-child {
   width: 200px;
   text-align: right;
 }
+
 /* Summary table last row */
 body.invoice-page #invoice-summary tbody tr:last-child td {
   height: 35px;
@@ -4963,12 +5171,14 @@ body.invoice-page #invoice-summary tbody tr:last-child td {
   background: #f8f8f8;
   line-height: 35px;
 }
+
 /* Bottom of page invoice buttons */
 body.invoice-page .invoice-buttons {
   position: absolute;
   bottom: 10px;
   left: 15px;
 }
+
 /*===============================================
   H. Gallery.html
 ================================================= */
@@ -4980,6 +5190,7 @@ body.gallery-page .panel-menu .tab-content {
   border: 0;
   background: transparent;
 }
+
 /*===============================================
   I. Validation.html
 ================================================= */
@@ -4989,6 +5200,7 @@ body.validation-page label.error {
   font-weight: 600;
   font-size: 12px;
 }
+
 /*===============================================
   J. Sketchpad.html
 ================================================= */
@@ -5008,6 +5220,7 @@ body.sketchpad-page .chat-panel .media-content {
 body.sketchpad-page .chat-panel .media-timestamp {
   margin-bottom: 5px;
 }
+
 /*===============================================
   K. Timeline.html
 ================================================= */
@@ -5022,6 +5235,7 @@ body.timeline-page #content {
 #timeline {
   position: relative;
 }
+
 /* Timeline Spine */
 #timeline:after {
   position: absolute;
@@ -5033,6 +5247,7 @@ body.timeline-page #content {
   background: #ddd;
   content: "";
 }
+
 /* Timeline Date Button/Label */
 .timeline-divider {
   position: relative;
@@ -5048,6 +5263,7 @@ body.timeline-page #content {
   background: #FFF;
   text-align: center;
 }
+
 /* Timeline Content Panels */
 #timeline .panel {
   position: relative;
@@ -5055,6 +5271,7 @@ body.timeline-page #content {
   overflow: visible;
   margin-bottom: 30px;
 }
+
 /* Timeline Panel Arrows */
 #timeline .panel:before,
 #timeline .panel:after {
@@ -5087,6 +5304,7 @@ body.timeline-page #content {
 #timeline .right-column .panel:after {
   border-right-color: #666;
 }
+
 /* Timeline Panel Positioning */
 #timeline>.row>.left-column .timeline-item {
   padding-right: 30px;
@@ -5103,6 +5321,7 @@ body.timeline-page #content {
 #timeline .ui-sortable-disabled .panel {
   cursor: auto;
 }
+
 /* Timeline Responsive Styles */
 @media (max-width: 770px) {
   #timeline>.row>.left-column .panel {
@@ -5125,6 +5344,7 @@ body.timeline-page #content {
 #timeline .tab-content {
   min-height: 0;
 }
+
 /* form creation styles */
 #timeline .map {
   width: 100%;
@@ -5138,6 +5358,7 @@ body.timeline-page #content {
 #timeline-image-form .fileupload-preview img {
   max-height: 200px;
 }
+
 /* JQuery sortable placeholder */
 #timeline .ui-sortable {
   min-width: 300px;
@@ -5163,6 +5384,7 @@ body.timeline-page #content {
   right: auto;
   left: -18px;
 }
+
 /* SINGLE TIMELINE */
 #timeline.timeline-single {
   margin-left: 50px;
@@ -5195,6 +5417,7 @@ body.timeline-page #content {
   right: auto;
   left: -8px;
 }
+
 /* Timeline Panel Arrows */
 #timeline.timeline-single .panel:before,
 #timeline.timeline-single .panel:after {
@@ -5207,6 +5430,7 @@ body.timeline-page #content {
 #timeline.timeline-single .panel:after {
   border-right-color: #666;
 }
+
 /*===============================================
   M. Map Pages - Full, Vector
 ================================================= */
@@ -5253,6 +5477,7 @@ body.timeline-page #content {
 .maps-page .expanding-header input.form-control {
   min-width: 250px;
 }
+
 /*===============================================
   L. Profile.html
 ================================================= */
@@ -5330,6 +5555,7 @@ body.timeline-page #content {
   background: #FFF;
   color: #917050;
 }
+
 /*===============================================
   M. Error Pages - 404, 500
 ================================================= */
@@ -5391,6 +5617,7 @@ body.timeline-page #content {
   border-radius: 1px;
   color: #AAA;
 }
+
 /*====================================================
   N. External Pages - Login, Screen-Lock, Comingsoon
 ====================================================== */
@@ -5454,6 +5681,7 @@ body.timeline-page #content {
   box-shadow: 0px 0 1px rgba(255, 255, 255, 0.75) inset;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1);
 }
+
 /* ================================================
    XI. PLUGINS
    A. Markitup
@@ -5488,6 +5716,7 @@ body.timeline-page #content {
   margin: 0;
   width: 100%;
 }
+
 /* Header */
 .markItUpHeader {
   padding: 8px 10px 0px;
@@ -5506,6 +5735,7 @@ body.timeline-page #content {
 .markItUpHeader ul .markItUpSeparator {
   height: 25px;
 }
+
 /* Textarea */
 .markItUpEditor {
   padding: 10px;
@@ -5519,10 +5749,12 @@ body.timeline-page #content {
   Arial,
   sans-serif;
 }
+
 /* Footer */
 .markItUpFooter {
   height: 15px;
 }
+
 /*===============================================
   B. Summernote
 ================================================= */
@@ -5560,6 +5792,7 @@ body.timeline-page #content {
 .note-editor .note-statusbar .note-resizebar {
   border: none;
 }
+
 /*===============================================
   C. CKEditor
 ================================================= */
@@ -5603,6 +5836,7 @@ body.timeline-page #content {
   clear: none !important;
   display: block !important;
 }
+
 /*===============================================
   D. RangeSlider
 ================================================= */
@@ -5613,6 +5847,7 @@ body.timeline-page #content {
   height: 20px;
   background-color: #6390a7;
 }
+
 /* Slider Inner bar */
 .ui-rangeSlider .ui-rangeSlider-innerBar {
   margin: 3px 0;
@@ -5625,6 +5860,7 @@ body.timeline-page #content {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset,
   0 -1px 0 rgba(255, 255, 255, 0.65) inset;
 }
+
 /* Slider Label */
 .ui-rangeSlider-label {
   border: 0;
@@ -5661,11 +5897,13 @@ body.timeline-page #content {
   font-size: 18px;
   font-family: FontAwesome;
 }
+
 /* Slider Input Label */
 input.ui-editRangeSlider-inputValue {
   width: 2.2em;
   border: 1px solid #DDD;
 }
+
 /* Slider Handles */
 //.ui-rangeSlider .ui-rangeSlider-handle {
 //     background: none;
@@ -5685,6 +5923,7 @@ input.ui-editRangeSlider-inputValue {
 //     margin-left: -4px;
 
 }
+
 /* Slider Arrows */
 .ui-rangeSlider-arrow {
   margin: 6px 0;
@@ -5697,6 +5936,7 @@ input.ui-editRangeSlider-inputValue {
 .ui-rangeSlider-arrow.ui-rangeSlider-rightArrow {
   right: -13px !important;
 }
+
 /*===============================================
   E. Clndr 
 ================================================= */
@@ -5849,6 +6089,7 @@ input.ui-editRangeSlider-inputValue {
 .clndr .clndr-table tr .adjacent-month:hover {
   background: #ddd;
 }
+
 /*===============================================
   F. Jvector Maps
 ================================================= */
@@ -5890,6 +6131,7 @@ input.ui-editRangeSlider-inputValue {
 .jvectormap-zoomout {
   right: 80px;
 }
+
 /*===============================================
   G. Flot Charts
 ================================================= */
@@ -5919,6 +6161,7 @@ input.ui-editRangeSlider-inputValue {
 td.legendColorBox {
   padding: 5px;
 }
+
 /*===============================================
   H. Tags Manager
 ================================================= */
@@ -5935,6 +6178,7 @@ td.legendColorBox {
   background-color: #e3def8;
   color: #6b3fa2;
 }
+
 /*===============================================
   I. Mixitup
 ================================================= */
@@ -5974,6 +6218,7 @@ td.legendColorBox {
 #Grid .mix .mix-desc {
   display: none;
 }
+
 /* Grid sortable placeholder */
 #Grid .placeholder {
   position: relative;
@@ -5994,6 +6239,7 @@ td.legendColorBox {
   1px 1px 0 #FFF;
   content: '';
 }
+
 /* List version */
 #Grid.list .mix {
   width: 100%;
@@ -6008,12 +6254,14 @@ td.legendColorBox {
 #Grid.list .mix:before {
   padding-top: 40px;
 }
+
 /* List Version img */
 #Grid.list .mix img {
   float: left;
   margin-right: 20px;
   max-height: 100%;
 }
+
 /* List Version text */
 #Grid.list .mix .mix-desc {
   display: block;
@@ -6028,6 +6276,7 @@ td.legendColorBox {
 #Grid.list .placeholder {
   margin-bottom: 1%;
 }
+
 /*===============================================
   J. Colorpicker/Datepicker/DateRangePicker
 ================================================= */
@@ -6044,6 +6293,7 @@ td.legendColorBox {
 .daterangepicker {
   background: #fafafa;
 }
+
 /*===============================================
   K. Dropzone
 ================================================= */
@@ -6094,11 +6344,13 @@ td.legendColorBox {
 .dropzone-previews a.dz-remove {
   cursor: pointer;
 }
+
 /* Demonstration Purposes ONLY */
 .dropzone .dz-preview .dz-error-message,
 .dropzone-previews .dz-preview .dz-error-message {
   display: none !important;
 }
+
 /*===============================================
   L. Gmap
 ================================================= */
@@ -6153,6 +6405,7 @@ td.legendColorBox {
 .map .checker {
   margin-right: 8px;
 }
+
 /* Map Styling Helper Classes */
 .map-shadow {
   -webkit-box-shadow: 0 2px 3px #999;
@@ -6196,6 +6449,7 @@ td.legendColorBox {
 .map-rounded {
   border-radius: 4px;
 }
+
 /*===============================================
   M. Chosen
 ================================================= */
@@ -6212,6 +6466,7 @@ td.legendColorBox {
 .chosen-container-single .chosen-drop {
   padding: 5px;
 }
+
 /* Multi Select List */
 .chosen-container-multi .chosen-choices {
   border-color: #ddd;
@@ -6257,6 +6512,7 @@ td.legendColorBox {
   -webkit-box-shadow: 0 0 8px #999;
   box-shadow: 0 0 8px #999;
 }
+
 /*===============================================
   N. Form Wizard
 ================================================= */
@@ -6270,6 +6526,7 @@ table.dataTable thead th {
   border-bottom: 1px solid #DDD;
   font-weight: 600;
 }
+
 /* Datatable Sorted Rows */
 table.dataTable tr.odd td.sorting_1 {
   background-color: white;
@@ -6278,11 +6535,13 @@ table.dataTable tr.odd td.sorting_1 {
 table.dataTable tr.even td.sorting_1 {
   background-color: #f8f8f8;
 }
+
 /* Datatable Filters Menu Container */
 .dt-panelmenu {
   margin: -15px -15px 10px;
   min-height: 52px;
 }
+
 /* DataTables Search Bar Filter */
 div.dataTables_filter input {
   padding: 3px 8px;
@@ -6299,6 +6558,7 @@ div.dataTables_filter input {
 div.dataTables_filter input[placeholder] {
   font-weight: 400;
 }
+
 /* DataTables Dropdown Filter */
 .dataTables_length {
   display: none;
@@ -6325,19 +6585,23 @@ div.dataTables_length label {
   color: #888;
   line-height: 28px;
 }
+
 /* DataTables Dropdown Filter Arrow Icon */
 .dataTables_length .chosen-container-single .chosen-single div {
   top: 3px;
 }
+
 /* Datatable Result Counter */
 div.dataTables_info {
   padding-top: 10px;
   color: #999;
 }
+
 /* Datatable Footer */
 .datatables-footer {
   margin-top: 10px;
 }
+
 /* Datatable Pagination */
 .datatables-footer .pagination {
   margin: 0;
@@ -6355,6 +6619,7 @@ table.dataTable>tbody>tr>td,
 table.dataTable>tfoot>tr>td {
   vertical-align: middle;
 }
+
 
 
 /* TableTools Buttons */
@@ -6541,6 +6806,7 @@ span.dynatree-connector {
 }
 
 
+
 /* Alternate Tree Style - Minimal. Uses class "tree-alt" */
 .tree-alt span.dynatree-folder {
   position: relative;
@@ -6558,6 +6824,7 @@ span.dynatree-connector {
   margin: 5px 3px;
   padding: 6px 7px 6px 4px;
 }
+
 
 
 /* Modifies size of alt style when in Panel Side Menu */
@@ -6611,6 +6878,7 @@ span.dynatree-connector {
 }
 
 
+
 /* Demonstration Styles - Tab Tree Content */
 .tree-content-example .tab-pane {
   display: none;
@@ -6624,6 +6892,7 @@ span.dynatree-connector {
   max-width: 47%;
   border: 3px solid #CCC;
 }
+
 
 
 /* Helper object */
@@ -6658,6 +6927,7 @@ div.dynatree-drop-reject span.dynatree-drag-helper-img {
 }
 
 
+
 /* Drop marker icon */
 #dynatree-drop-marker {
   position: absolute;
@@ -6681,6 +6951,7 @@ div.dynatree-drop-reject span.dynatree-drag-helper-img {
 }
 
 
+
 /* Source node while dragging */
 span.dynatree-drag-source {
   /* border: 1px dotted gray; */
@@ -6690,6 +6961,7 @@ span.dynatree-drag-source {
 span.dynatree-drag-source a {
   color: gray;
 }
+
 
 
 /* Target node while dragging cursor is over it */
@@ -6708,6 +6980,7 @@ span.dynatree-drop-target.dynatree-drop-accept a {
 span.dynatree-drop-target.dynatree-drop-reject {
   /* border: 1px solid red; */
 }
+
 /*===============================================
   Q. Nestable
 ================================================= */
@@ -6748,6 +7021,7 @@ span.dynatree-drop-target.dynatree-drop-reject {
   font-size: 13px;
   line-height: 20px;
 }
+
 
 
 /* Default Color */
@@ -6906,6 +7180,7 @@ span.dynatree-drop-target.dynatree-drop-reject {
 }
 
 
+
 /* Nestable Extras */
 .nestable-lists {
   clear: both;
@@ -6934,6 +7209,7 @@ span.dynatree-drop-target.dynatree-drop-reject {
   monospace;
   line-height: 1.333333em;
 }
+
 
 
 /* Alternate Colors */
@@ -7003,6 +7279,7 @@ span.dynatree-drop-target.dynatree-drop-reject {
 .dd-hover>.dd-handle {
   background: #2ea8e5 !important;
 }
+
 
 
 /* Nestable Draggable Handles */
@@ -7200,6 +7477,7 @@ span.dynatree-drop-target.dynatree-drop-reject {
 .ui-spinner-down {
   bottom: 0px;
 }
+
 /* Custom Theme(purple) Alert */
 .alert-theme {
   border-color: rgba(199,
@@ -7216,6 +7494,7 @@ span.dynatree-drop-target.dynatree-drop-reject {
 .alert-theme .alert-link {
   color: #715da3;
 }
+
 /*===============================================
   A. Colors for Custom Elements
 ================================================= */
@@ -7226,20 +7505,24 @@ span.dynatree-drop-target.dynatree-drop-reject {
 .twitter-color {
   background-color: #4fbdc8;
 }
+
 /* custom right side menu button */
 .text-cloud {
   color: #afb6c6;
 }
+
 /* User Online Green Border Color */
 .border-onlinegreen {
   border-color: #94d867;
 }
+
 /*===============================================
   A. Tabs
 ================================================= */
 .panel-tabs>li.active:after {
   background: #428bca;
 }
+
 /*===============================================
   A. Icons
 ================================================= */
@@ -7251,6 +7534,7 @@ span.dynatree-drop-target.dynatree-drop-reject {
 .panel-title .imoon {
   color: #999;
 }
+
 /*===============================================
   A. Menu and Button Dropdowns
 ================================================= */
@@ -7259,6 +7543,7 @@ span.dynatree-drop-target.dynatree-drop-reject {
 .dropdown-menu>.active>a:focus {
   background-color: #428bca;
 }
+
 /*===============================================
   A. Text Input Forms
 ================================================= */
@@ -7276,6 +7561,7 @@ span.dynatree-drop-target.dynatree-drop-reject {
 .has-error .form-control:focus {
   border-color: #ff745a;
 }
+
 /*===============================================
   A. Thumbnails
 ================================================= */
@@ -7288,6 +7574,7 @@ a.thumbnail.active {
 .thumbnail-xs {
   border-color: #a287d4;
 }
+
 /* .thumbnail-sm {
   border-color: #a287d4; */
 
@@ -7314,6 +7601,7 @@ a.thumbnail.active {
   border-color: #715da3;
   background-color: #715da3;
 }
+
 /*===============================================
   A. Checkboxes
 ================================================= */
@@ -7428,6 +7716,7 @@ a.thumbnail.active {
 .cBox.cBox-grey3 label:before {
   background-color: #6ebbdd;
 }
+
 /*===============================================
   A. Switches
 ================================================= */
@@ -7538,6 +7827,7 @@ div.switch.switch-grey2 input:checked+label {
 div.switch.switch-grey3 input:checked+label {
   background-color: #6ebbdd;
 }
+
 /*===============================================
   A. RangeSlider
 ================================================= */
@@ -7651,6 +7941,7 @@ div.switch.switch-grey3 input:checked+label {
 .ui-rangeSlider.slider-grey3 .ui-rangeSlider-bar {
   background-color: #6ebbdd;
 }
+
 /*===============================================
   B. Progress Bar Colors
 ================================================= */
@@ -7761,6 +8052,7 @@ div.switch.switch-grey3 input:checked+label {
 .progress-bar-grey3 {
   border-color: #6ebbdd !important;
 }
+
 /* Neutral Colors */
 .progress-bar-white {
   background-color: white !important;
@@ -7925,6 +8217,7 @@ div.switch.switch-grey3 input:checked+label {
 .text-grey3 {
   color: #4b87ae !important;
 }
+
 /* Neutral Colors */
 .text-white {
   color: white !important;
@@ -8097,6 +8390,7 @@ div.switch.switch-grey3 input:checked+label {
 .border-grey3 {
   border-color: #4b87ae !important;
 }
+
 /* Neutral Colors */
 .border-white {
   border-color: white !important;
@@ -8261,6 +8555,7 @@ div.switch.switch-grey3 input:checked+label {
 .bg-grey3 {
   background-color: #4b87ae !important;
 }
+
 /* Neutral Colors */
 .bg-white {
   background-color: transparent !important;
@@ -8321,6 +8616,7 @@ div.switch.switch-grey3 input:checked+label {
 .bg-dark5 {
   background-color: #1e1c1f !important;
 }
+
 /* Used for gradient creation of Neutral Colors */
 .bg-dark.bg-gradient {
   background-color: #777777 !important;
@@ -8718,6 +9014,7 @@ div.switch.switch-grey3 input:checked+label {
 .btn-default:hover {
   color: #555555;
 }
+
 /*===============================================
   P. POSITION SETTINGS
 ================================================= */
@@ -8748,11 +9045,13 @@ div.switch.switch-grey3 input:checked+label {
 .navbar.navbar-fixed-top+#main {
   margin-top: 60px;
 }
+
 /* Fixed Sidebar */
 #sidebar_left.affix {
   position: fixed;
   height: 100%;
 }
+
 /* Scrollbar for Sidebars in Fixed Positions */
 #sidebar_left.affix>.sidebar-menu {
   position: absolute;
@@ -8771,6 +9070,7 @@ div.switch.switch-grey3 input:checked+label {
   width: 100%;
   transition: top .2s ease-in-out;
 }
+
 /* Corrects Pseudo sidebar bg when fixed */
 #sidebar_left.affix:before {
   left: 0;
@@ -8780,6 +9080,7 @@ body.sidebar-hidden #sidebar_left.affix:before,
 body.sidebar-rtl #sidebar_left.affix:before {
   left: -230px;
 }
+
 /* Sidebar User Area - Hidden */
 .user-info.hidden,
 .user-info.hidden+.user-divider {
@@ -8799,10 +9100,12 @@ body.usermenu-hidden #sidebar_left.affix .user-info+.user-divider+.user-menu+.si
 #sidebar_left.affix>.user-menu.usermenu-open+.sidebar-menu {
   top: 250px;
 }
+
 /* Topbar/Breadcrumbs Area - Hidden */
 body.hidden-breadcrumbs #topbar {
   display: none;
 }
+
 /* for preview only - no real use in development enviroment */
 body.sidebar-collapsed #sidebar:before {
   width: 40px;
@@ -9210,6 +9513,7 @@ input::-webkit-contacts-auto-fill-button {
   -webkit-animation-name: flash;
   animation-name: flash;
 }
+
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 @-webkit-keyframes pulse {
   0% {
@@ -9527,6 +9831,7 @@ input::-webkit-contacts-auto-fill-button {
   -webkit-animation-name: tada;
   animation-name: tada;
 }
+
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 @-webkit-keyframes wobble {
   0% {
@@ -11898,6 +12203,7 @@ input::-webkit-contacts-auto-fill-button {
   -webkit-animation-name: hinge;
   animation-name: hinge;
 }
+
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 @-webkit-keyframes rollIn {
   0% {
@@ -11933,6 +12239,7 @@ input::-webkit-contacts-auto-fill-button {
   -webkit-animation-name: rollIn;
   animation-name: rollIn;
 }
+
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 @-webkit-keyframes rollOut {
   0% {
