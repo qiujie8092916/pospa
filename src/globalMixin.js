@@ -3,7 +3,6 @@ import axios from 'axios';
 
 export default {
   methods: {
-    /* apis , fn */
     rpc: function(apis, fn) {
       var setupApis = [];
       var that = this;
@@ -18,28 +17,6 @@ export default {
             return arg.data.error;
           }));
         }));
-      // var xhr = new XMLHttpRequest();
-      // xhr.onreadystatechange = function() {
-      //   if (xhr.readyState === 4) {
-      //     if ((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304) {
-      //       console.log('successful: ' + xhr.status);
-      //     } else {
-      //       console.log('Request was unsuccessful: ' + xhr.status);
-      //     }
-      //   }
-      // };
-      // xhr.open('post', 'https://icepointcloud.com/gateway/api/jsonrpc.jsp');
-      // xhr.setRequestHeader('icepoint_from', 'admin');
-      // xhr.send({
-      //   query: JSON.stringify({
-      //     jsonrpc: '2.0',
-      //     method: 'bizadmin.listStoreOrRepositoryByCompanyId',
-      //     id: String(new Date().getTime()),
-      //     params: [{
-      //       'isRepository': false
-      //     }]
-      //   })
-      // });
     },
     rpcsetup: function(api) {
       let config = {
@@ -192,6 +169,9 @@ export default {
       var output = temp.innerHTML;
       temp = null;
       return output;
+    },
+    fakeUrl(url) {
+      return url.split('.')[0];
     }
   }
 };

@@ -9,6 +9,7 @@
       <keep-alive>
         <router-view v-if="$route.meta.keepAlive"></router-view>
       </keep-alive>
+      <router-view v-if="!$route.meta.keepAlive"></router-view>
     </div>
   </div>
 </template>
@@ -52,30 +53,6 @@ export default {
     if (that.$route.path === '/dashBoard') {
       that.$store.commit('setActiveTab', '/dashBoard');
     }
-    // if (that.$route.path === '/dashBoard' || that.$route.path === '/') {
-    //   that.$router.push({
-    //     name: '主页',
-    //     path: '/dashBoard'
-    //   });
-    //   that.$store.commit('setActiveTab', '/dashBoard');
-    // } else {
-    //   let name = '';
-    //   that.$store.state.auths.forEach(auth => {
-    //     if (auth.authorityHtmlElement && (auth.authorityHtmlElement.split('.')[0] === that.$route.path.split('/').pop())) {
-    //       name = auth.authorityName;
-    //       return false;
-    //     }
-    //   });
-    //   that.$store.commit('addTab', {
-    //     name: name,
-    //     route: that.$route.path
-    //   });
-    //   that.$router.push({
-    //     name: name,
-    //     path: that.$route.path
-    //   });
-    //   that.$store.commit('setActiveTab', that.$route.path);
-    // }
   },
   methods: {
     handleClick(tab) {
@@ -117,7 +94,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .template-tabs {
-  // border: 1px solid #d8dce5;
   height: 100%;
 }
 
@@ -127,5 +103,3 @@ export default {
   border-top: none;
 }
 </style>
-<!-- <left-side-bar class="mt1" v-if="$route.path === '/' || $route.path === '/admin'"></left-side-bar> 
-<el-main class="mt1"></el-main> -->

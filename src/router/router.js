@@ -22,7 +22,7 @@ function authToRoutes() {
     if (auth.authorityName &&
       auth.authorityCode &&
       auth.authorityHtmlElement) {
-      let componentName = auth.authorityHtmlElement.substring(0, auth.authorityHtmlElement.indexOf('.'));
+      let componentName = auth.authorityHtmlElement.split('.')[0];
       routes.push({
         // props: true,
         name: auth.authorityName,
@@ -36,10 +36,10 @@ function authToRoutes() {
     }
   });
 
-  routes.push({
-    path: '*',
-    redirect: '/'
-  });
+  // routes.push({
+  //   path: '*',
+  //   redirect: '/'
+  // });
 
   return routes;
 }
