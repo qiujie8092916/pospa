@@ -16,10 +16,7 @@
   "cdn":
   {
     "js": [],
-    "css": [
-      "/src/assets/css/theme.css",
-      "/src/assets/css/bootstrap.min.css"
-    ]
+    "css": []
   },
   "externals":
   {}

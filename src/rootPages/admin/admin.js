@@ -7,6 +7,10 @@ import router from '../../router/router.js';
 
 import ElementUI from 'element-ui';
 import '../../assets/css/variables.scss';
+
+import '@/assets/css/theme.css';
+import '@/assets/css/bootstrap.min.css';
+
 Vue.use(ElementUI, { size: 'mini' });
 // Vue.use(VueResource);
 Vue.use(VueRouter);

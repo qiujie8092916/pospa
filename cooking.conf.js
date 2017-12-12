@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 var cooking = require('cooking');
 var build = require('./build.js');
-
+var isProd = process.env.NODE_ENV === 'production';
 cooking.set({
   entry: build.entries(),
   template: build.templates(),
@@ -18,8 +18,8 @@ cooking.set({
     extractCSS: false,
     // 显示日志信息在页面上
     log: true,
-    hostname: 'localhost',
-    protocol: 'http:',
+    hostname: isProd ? 'icepointcloud.com' : 'localhost',
+    protocol: isProd ? 'https:' : 'http:',
     // HTML5 history API
     historyApiFallback: true,
     // 控制台输出的信息
@@ -28,7 +28,6 @@ cooking.set({
     quiet: false,
     lazy: false
   },
-
   // production
   clean: true,
   hash: true,
@@ -36,9 +35,9 @@ cooking.set({
   minimize: false,
   chunk: true, // see https://cookingjs.github.io/zh-cn/configuration.html#chunk
   postcss: [
-    // require('...')
+    // require('postcss-salad')
   ],
-  publicPath: '/dist/',
+  publicPath: '/',
   assetsPath: 'static',
   urlLoaderLimit: 10000,
   static: true,
@@ -53,5 +52,4 @@ cooking.set({
   extends: ['vue2', 'lint', 'sass', 'autoprefixer'],
   externals: build.externals()
 });
-
 module.exports = cooking.resolve();
