@@ -1,10 +1,5 @@
 <template>
-  <div class="text-center qiujie">
-    <strong>这是{{title}}</strong>
-    <div style="width: 150px;margin: 10px auto;">
-      <el-input v-model="input" placeholder="请输入内容"></el-input>
-    </div>
-  </div>
+  <div class="text-center qiujie"> <strong>这是{{title}}</strong> </div>
 </template>
 <script>
 import App from './product_list';

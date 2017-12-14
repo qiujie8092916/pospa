@@ -5,8 +5,7 @@ export default {
   mixins: [mixins],
   data() {
     return {
-      title: '商品页',
-      input: ''
+      title: '商品页'
     };
   },
   mounted() {
@@ -29,7 +28,6 @@ export default {
       //     console.log(e);
       //   }
       // });
-
       $.ajax({
         url: 'http://localhost:8080/api/data/post?sn=Q1234567890&requesttime=21345432',
         type: 'post',

@@ -3,7 +3,8 @@ import leftSideBar from '../../components/leftSideBar';
 export default {
   data() {
     return {
-      title: '主页'
+      title: '主页',
+      input: 'Hello World!!!'
     };
   },
   components: {
