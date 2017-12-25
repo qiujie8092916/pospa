@@ -15,7 +15,7 @@ cooking.set({
     // 热替换
     hot: true,
     // 提取 CSS
-    extractCSS: false,
+    extractCSS: true,
     // 显示日志信息在页面上
     log: true,
     hostname: isProd ? 'icepointcloud.com' : 'localhost',
@@ -33,7 +33,7 @@ cooking.set({
   clean: true,
   hash: true,
   sourceMap: true,
-  minimize: false,
+  minimize: true,
   chunk: true, // see https://cookingjs.github.io/zh-cn/configuration.html#chunk
   postcss: [
     // require('postcss-salad')
@@ -43,7 +43,7 @@ cooking.set({
   urlLoaderLimit: 10000,
   // static: true,
   devtool: '#cheap-module-eval-source-map',
-  extractCSS: isProd ? '[name].[contenthash:7].css' : '[name].css',
+  extractCSS: '[name].[contenthash:7].css',
   alias: {
     'vue$': 'vue/dist/vue.js',
     'jquery': path.resolve(__dirname, './node_modules/jquery/src/jquery'),

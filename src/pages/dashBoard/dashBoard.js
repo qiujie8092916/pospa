@@ -1,5 +1,6 @@
 import App from './dashBoard.vue';
-import leftSideBar from '../../components/leftSideBar';
+import leftSideBar from '@/components/leftSideBar';
+import formatInput from '@/components/formatInput';
 export default {
   data() {
     return {
@@ -8,7 +9,8 @@ export default {
     };
   },
   components: {
-    'leftSideBar': leftSideBar
+    'leftSideBar': leftSideBar,
+    'formatInput': formatInput
   },
   ...App
 };

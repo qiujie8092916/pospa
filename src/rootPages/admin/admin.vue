@@ -58,7 +58,6 @@ export default {
       return this.$store.state.auths;
     },
     activeHeader() {
-      var that = this;
       if (this.$route.path === '/' ||
         this.$route.path === '/dashBoard') {
         this.activeAuth[0] = {
@@ -68,7 +67,7 @@ export default {
         };
       } else {
         this.activeAuth = this.auths.filter(auth => {
-          return (auth.authorityHtmlElement && (that.fakeUrl(auth.authorityHtmlElement) === that.$route.path.split('/')[1]));
+          return (auth.authorityHtmlElement && (this.fakeUrl(auth.authorityHtmlElement) === this.$route.path.split('/')[1]));
         });
       }
       return this.activeAuth[0].authorityCode;

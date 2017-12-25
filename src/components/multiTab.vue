@@ -44,14 +44,13 @@ export default {
     }
   },
   mounted() {
-    var that = this;
-    that.$store.commit('addTab', {
+    this.$store.commit('addTab', {
       route: '/dashBoard',
       name: '主页'
     });
     // 开始非主页
-    if (that.$route.path === '/dashBoard') {
-      that.$store.commit('setActiveTab', '/dashBoard');
+    if (this.$route.path === '/dashBoard') {
+      this.$store.commit('setActiveTab', '/dashBoard');
     }
   },
   methods: {
