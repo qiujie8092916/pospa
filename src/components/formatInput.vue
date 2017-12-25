@@ -1,5 +1,4 @@
-<template>
-  <span class="dr-input">
+<template> <span class="dr-input">
     <input v-if="isEdit" 
       type="text" 
       ref="input" 
@@ -13,8 +12,7 @@
       class="dr-input-span" 
       :class="vSpanClass"
       >{{value}}
-    </span>
-  </span>
+    </span> </span>
 </template>
 <script>
 import mixin from '@/globalMixin.js';
@@ -44,26 +42,18 @@ export default {
   mounted() {
     if (this.has(this.attr, true)) {
       for (let i in this.attr) {
-        // $(this.$refs.input).attr(i, this.attr[i]);
-        console.log(i);
+        this.$refs.input.setAttribute(i, this.attr[i]);
       }
     }
     if (this.has(this.vStyle, true)) {
-      let style = '';
       for (let i in this.vStyle) {
-        style += i + ':' + this.vStyle[i] + ';';
+        this.$refs.input.style[i] = this.vStyle[i];
       }
-      console.log(style);
-      // $(this.$refs.input).attr('style', style);
     }
-
     /*    if (this.type === 'date') {
           $(this.$refs.input).datepicker();
         }*/
-
-    if (this.options && this.options.maxLength !== undefined) {
-      // $(this.$refs.input).maxLength = this.options.maxLength;
-    }
+    if (this.options && this.options.maxLength !== undefined) this.$refs.input.maxLength = this.options.maxLength;
   },
   methods: {
     // 数字校验
@@ -74,12 +64,9 @@ export default {
         if (this.has(opt.min, true) && opt.min >= 0) {
           temp = temp.replace(/[^\d\.]/g, '');
         } else {
-          temp = temp.replace(/[^\d\.\-]/g, '')
-            .replace(/^([\-]?\d{0,}\.?\d{0,})[^0-9]?/, '$1')
-            .replace('-', '*').replace(/\-/g, '').replace('*', '-');
+          temp = temp.replace(/[^\d\.\-]/g, '').replace(/^([\-]?\d{0,}\.?\d{0,})[^0-9]?/, '$1').replace('-', '*').replace(/\-/g, '').replace('*', '-');
         }
-        temp = temp.replace(/^0[\d]/g, '0')
-          .replace('.', '#').replace(/\./g, '').replace('#', '.');
+        temp = temp.replace(/^0[\d]/g, '0').replace('.', '#').replace(/\./g, '').replace('#', '.');
       }
       if (this.has(opt.dec, true)) {
         if (!isNaN(parseInt(opt.dec, 0))) {
@@ -103,9 +90,7 @@ export default {
           let int = parseInt(opt.int, 0);
           let dectemp = temp.replace(/(-)|(\.[0-9]{0,})/g, '');
           if (dectemp.length > int) {
-            temp = (temp.match(/-/g) ? temp.match(/-/g)[0] : '') +
-              dectemp.substr(0, int) +
-              (temp.match(/\.[0-9]{0,}/g) ? temp.match(/\.[0-9]{0,}/g)[0] : '');
+            temp = (temp.match(/-/g) ? temp.match(/-/g)[0] : '') + dectemp.substr(0, int) + (temp.match(/\.[0-9]{0,}/g) ? temp.match(/\.[0-9]{0,}/g)[0] : '');
           }
         } else {
           console.error('options.int不是正确的类型');
@@ -151,8 +136,7 @@ export default {
         while (s.length <= rs + number) {
           s += '0';
         }
-        if (this.has(this.options.noString, true) &&
-          this.options.noString) {
+        if (this.has(this.options.noString, true) && this.options.noString) {
           if (s === '') s = this.options.min ? this.options.min : 0;
           else s = isNaN(Number(s)) ? 0 : Number(s);
         }
@@ -161,7 +145,7 @@ export default {
       }
       this.$emit('blur', true);
     },
-    enterFn: function () {
+    enterFn: function() {
       this.$emit('keyup-enter', true);
     }
   },
@@ -169,8 +153,7 @@ export default {
     attr() {
       if (this.has(this.attr, true)) {
         for (let i in this.attr) {
-          // $(this.$refs.input).attr(i, this.attr[i]);
-          console.log(i);
+          this.$refs.input.setAttribute(i, this.attr[i]);
         }
       }
     }

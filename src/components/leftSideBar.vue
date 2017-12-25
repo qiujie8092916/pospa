@@ -1,7 +1,7 @@
 <template>
   <el-aside width="200px" class="pull-left">
-    <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose">
-      <el-submenu index="1">
+    <el-menu :default-active="input" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" @select="handleSelect">
+      <!--     <el-submenu index="1">
         <template slot="title">
           <i class="el-icon-location"></i>
           <span>导航一</span>
@@ -18,27 +18,41 @@
           <template slot="title">选项4</template>
           <el-menu-item index="1-4-1">选项1</el-menu-item>
         </el-submenu>
-      </el-submenu>
-      <el-menu-item index="2">
+      </el-submenu> -->
+      <el-menu-item index="one">
         <i class="el-icon-menu"></i>
-        <span slot="title">导航二</span>
+        <span slot="title">导航一</span>
       </el-menu-item>
-      <el-menu-item index="3">
+      <el-menu-item index="two">
         <i class="el-icon-setting"></i>
-        <span slot="title">导航三</span>
+        <span slot="title">导航二</span>
       </el-menu-item>
     </el-menu>
   </el-aside>
 </template>
 <script>
+import store from '@/store/index.js';
 export default {
   name: 'leftSideBar',
+  store,
+  data() {
+    return {
+      input: 'two'
+    };
+  },
+  created() {
+    this.$store.commit('setIsInput', this.input);
+  },
   methods: {
-    handleOpen(key, keyPath) {
-      console.log(key, keyPath);
+    handleOpen(index, indexPath) {
+      console.log(index, indexPath);
     },
-    handleClose(key, keyPath) {
-      console.log(key, keyPath);
+    handleClose(index, indexPath) {
+      console.log(index, indexPath);
+    },
+    handleSelect(index) {
+      this.input = index;
+      this.$store.commit('setIsInput', index);
     }
   }
 };

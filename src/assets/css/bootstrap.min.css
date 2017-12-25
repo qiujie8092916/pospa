@@ -219,6 +219,8 @@ td, th {
   }
 }
 
+
+
 /*@font-face {
   font-family: 'Glyphicons Halflings';
   src: url('../fonts/glyphicons-halflings-regular.eot');
@@ -2089,11 +2091,10 @@ output {
   display: block;
   vertical-align: middle;
   width: 100%;
-  height: 30px;
-  line-height: 30px;
+  height: 28px;
+  line-height: 28px;
   padding: 6px 12px;
-  font-size: 13px;
-  line-height: 1.42857143;
+  font-size: 13px; // line-height: 1.42857143;
   color: #666;
   background-color: #fff;
   background-image: none;
@@ -2188,6 +2189,8 @@ input[type="radio"][disabled], input[type="checkbox"][disabled], input[type="rad
   cursor: not-allowed
 }
 
+
+
 /********qj:20170316***********/
 
 .font-white {
@@ -2213,6 +2216,8 @@ font.must {
   font-size: 18px;
   vertical-align: top;
 }
+
+
 
 /*******************/
 
@@ -2917,6 +2922,8 @@ tbody.collapse.in {
   -webkit-box-shadow: none;
   box-shadow: none
 }
+
+
 
 /* 
 .btn .caret {

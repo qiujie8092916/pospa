@@ -18,7 +18,7 @@ function authToRoutes() {
     component: dashBoard
   }];
 
-  Store.state.auths.forEach(auth => {
+  Store.state.authNav.auths.forEach(auth => {
     if (auth.authorityName &&
       auth.authorityCode &&
       auth.authorityHtmlElement) {

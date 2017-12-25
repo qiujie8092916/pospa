@@ -28,7 +28,7 @@ export default {
   computed: {
     activeTab: {
       get() {
-        return this.$store.state.activeTab;
+        return this.$store.state.multiTab.activeTab;
       },
       set(val) {
         this.$store.commit('setActiveTab', val);
@@ -36,7 +36,7 @@ export default {
     },
     tabs: {
       get() {
-        return this.$store.state.tabs;
+        return this.$store.state.multiTab.tabs;
       },
       set(val) {
         this.$store.commit('setTabs', val);
@@ -90,13 +90,18 @@ export default {
     },
     'activeTab' (nv, ov) {
       if (nv !== ov) {
-        let activeHeader = this.$store.state.auths.filter(auth => {
+        let activeHeader = this.$store.state.authNav.auths.filter(auth => {
           return '/'.concat(auth.authorityHtmlElement).split('.')[0] === nv;
         });
         if (activeHeader.length) {
           this.$router.push({
             name: activeHeader[0].authorityName,
             path: '/'.concat(activeHeader[0].authorityHtmlElement).split('.')[0]
+          });
+        } else if (nv === '/dashBoard') {
+          this.$router.push({
+            name: '主页',
+            path: '/dashBoard'
           });
         }
       }

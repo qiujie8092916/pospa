@@ -55,7 +55,7 @@ export default {
   },
   computed: {
     auths() {
-      return this.$store.state.auths;
+      return this.$store.state.authNav.auths;
     },
     activeHeader() {
       if (this.$route.path === '/' ||

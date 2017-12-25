@@ -15,7 +15,7 @@ cooking.set({
     // 热替换
     hot: true,
     // 提取 CSS
-    extractCSS: true,
+    extractCSS: '[name].[contenthash:7].css',
     // 显示日志信息在页面上
     log: true,
     hostname: isProd ? 'icepointcloud.com' : 'localhost',

@@ -2,25 +2,13 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import authNav from './modules/authNav/index.js';
 import multiTab from './modules/multiTab/index.js';
+import dashBoard from './modules/dashBoard/';
 Vue.use(Vuex);
 
-const state = Object.assign(
-  multiTab.state,
-  authNav.state
-);
-
-const getters = Object.assign(
-  multiTab.getters
-);
-
-const mutations = Object.assign(
-  multiTab.mutations
-);
-
 export default new Vuex.Store({
-  // modules: {},
-  state,
-  getters,
-  actions: {},
-  mutations
+  modules: {
+    authNav: authNav,
+    multiTab: multiTab,
+    dashBoard: dashBoard
+  }
 });
