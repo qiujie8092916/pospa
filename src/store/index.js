@@ -2,7 +2,6 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import authNav from './modules/authNav/index.js';
 import multiTab from './modules/multiTab/index.js';
-
 Vue.use(Vuex);
 
 const state = Object.assign(
@@ -10,14 +9,18 @@ const state = Object.assign(
   authNav.state
 );
 
+const getters = Object.assign(
+  multiTab.getters
+);
+
 const mutations = Object.assign(
   multiTab.mutations
 );
 
 export default new Vuex.Store({
-  modules: {},
+  // modules: {},
   state,
-  getters: {},
+  getters,
   actions: {},
   mutations
 });

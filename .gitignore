@@ -5,6 +5,6 @@
 build
 dist
 node_modules/*
+!node_modules/element-ui/lib/element-ui.common.js
 .gitkeep
 converage
-!node_modules/element-ui/lib/element-ui.common.js

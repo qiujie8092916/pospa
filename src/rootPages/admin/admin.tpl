@@ -14,10 +14,9 @@
   <meta name="theme-color" content="#5395ce">
   <meta http-equiv="cache-control" content="no-cache">
   <meta http-equiv="expires" content="0">
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="/src/assets/favicon/icepoint.ico">
+  <link rel="shortcut icon" href="https://icepointcloud.com/img/homeIcon/home_icon.png" />
   <% for (var i in htmlWebpackPlugin.options.cdn.css) { %>
-    <link rel="stylesheet" href="<%= htmlWebpackPlugin.options.cdn.css[i] %>">
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.options.cdn.css[i] %>" />
     <% } %>
 </head>
 

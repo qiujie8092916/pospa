@@ -14,13 +14,13 @@
   </div>
 </template>
 <script>
-import leftSideBar from './multiTab';
+import multiTab from './multiTab';
 import mixins from '../globalMixin.js';
 export default {
   name: 'multiTab',
   mixins: [mixins],
   components: {
-    'leftSideBar': leftSideBar
+    'leftSideBar': multiTab
   },
   data() {
     return {};
@@ -86,6 +86,19 @@ export default {
         if (!flag) {
           this.$store.commit('addTab', { route: '/' + to.path.split('/')[1], name: to.name });
           this.$store.commit('setActiveTab', '/' + to.path.split('/')[1]);
+        }
+      }
+    },
+    'activeTab' (nv, ov) {
+      if (nv !== ov) {
+        let activeHeader = this.$store.state.auths.filter(auth => {
+          return '/'.concat(auth.authorityHtmlElement).split('.')[0] === nv;
+        });
+        if (activeHeader.length) {
+          this.$router.push({
+            name: activeHeader[0].authorityName,
+            path: '/'.concat(activeHeader[0].authorityHtmlElement).split('.')[0]
+          });
         }
       }
     }

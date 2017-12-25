@@ -19,6 +19,7 @@ cooking.set({
     // 显示日志信息在页面上
     log: true,
     hostname: isProd ? 'icepointcloud.com' : 'localhost',
+    // hostname: isProd ? 'icepointcloud.com' : '192.168.1.176',
     protocol: isProd ? 'https:' : 'http:',
     // HTML5 history API
     historyApiFallback: true,
@@ -38,11 +39,11 @@ cooking.set({
     // require('postcss-salad')
   ],
   publicPath: '/',
-  assetsPath: 'static',
+  assetsPath: 'assets',
   urlLoaderLimit: 10000,
-  static: true,
+  // static: true,
   devtool: '#cheap-module-eval-source-map',
-  extractCSS: '[name].[contenthash:7].css',
+  extractCSS: isProd ? '[name].[contenthash:7].css' : '[name].css',
   alias: {
     'vue$': 'vue/dist/vue.js',
     'jquery': path.resolve(__dirname, './node_modules/jquery/src/jquery'),
