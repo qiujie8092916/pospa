@@ -9,7 +9,7 @@
     </el-main>
     <el-main v-else-if="isInput==='two'" class="mt1 qiujie">
       <strong>这是{{title}}</strong>
-      <div style="width: 210px;margin: 10px auto;">
+      <div style="width: 280px;margin: 10px auto;">
         <el-input v-model='ela'></el-input>
       </div>
       <div style="width:1000px;margin: 0 auto;">

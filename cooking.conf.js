@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 var cooking = require('cooking');
 var build = require('./build.js');
-// var isProd = process.env.NODE_ENV === 'production';
+var isProd = process.env.NODE_ENV === 'production';
 cooking.set({
   entry: build.entries(),
   template: build.templates(),
@@ -31,6 +31,9 @@ cooking.set({
     lazy: false
   },
   // production
+  debug: !isProd,
+  devtools: !isProd,
+  productionTip: !isProd,
   clean: true,
   hash: true,
   sourceMap: true,
@@ -39,11 +42,13 @@ cooking.set({
   postcss: [
     // require('postcss-salad')
   ],
-  publicPath: '/',
+  //入口html<script>的src对应路径
+  publicPath: '../',
   assetsPath: 'assets',
   urlLoaderLimit: 10000,
   // static: true,
-  devtool: '#cheap-module-eval-source-map',
+  // devtool: '#cheap-module-eval-source-map',
+  devtool: '#source-map',
   extractCSS: '[name].[contenthash:7].css',
   alias: {
     'vue$': 'vue/dist/vue.js',

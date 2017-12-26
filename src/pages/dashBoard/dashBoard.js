@@ -16,7 +16,7 @@ export default {
     return {
       title: '主页',
       input: '',
-      ela: 'eleUI+vue2+webpack 示例页面',
+      ela: 'eleUI+vue2+vue-router+webpack 示例页面',
       colobject: [{
         label: '姓名',
         prop: 'customerName',
@@ -988,7 +988,7 @@ export default {
     openToast(index) {
       this.$notify.warning({
         title: '：' + this.tdata[index].customerName,
-        message: '双击我干嘛？'
+        message: '双击我干嘛？' + process.env.NODE_ENV
       });
     }
   },
