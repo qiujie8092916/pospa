@@ -1,5 +1,6 @@
 @import '../../assets/theme/element-variables.scss';
 
+
 /*
   覆盖../theme/element-variables.scss主题变量
 */
@@ -13,6 +14,7 @@ $--border-transition-base: border-color .1s cubic-bezier(.645, .045, .355, 1) !d
 $--color-transition-base: color .1s cubic-bezier(.645, .045, .355, 1) !default;
 $--font-path: '../fonts';
 @import '../../../node_modules/element-ui/packages/theme-chalk/src/index';
+
 
 /*
   覆盖Element样式表  
@@ -56,4 +58,8 @@ $--font-path: '../fonts';
   height: 25px !important;
   line-height: 25px !important;
   font-size: 12px !important;
+}
+.el-notification {
+  width: 300px;
+  border-radius: 2px;
 }

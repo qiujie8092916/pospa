@@ -1,4 +1,5 @@
-<template> <span class="dr-input">
+<template>
+  <span class="dr-input">
     <input v-if="isEdit" 
       type="text" 
       ref="input" 
@@ -12,7 +13,8 @@
       class="dr-input-span" 
       :class="vSpanClass"
       >{{value}}
-    </span> </span>
+    </span>
+  </span>
 </template>
 <script>
 import mixin from '@/globalMixin.js';

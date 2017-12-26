@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 var cooking = require('cooking');
 var build = require('./build.js');
-var isProd = process.env.NODE_ENV === 'production';
+// var isProd = process.env.NODE_ENV === 'production';
 cooking.set({
   entry: build.entries(),
   template: build.templates(),
@@ -15,12 +15,13 @@ cooking.set({
     // 热替换
     hot: true,
     // 提取 CSS
-    extractCSS: '[name].[contenthash:7].css',
+    extractCSS: true,
     // 显示日志信息在页面上
     log: true,
-    hostname: isProd ? 'icepointcloud.com' : 'localhost',
-    // hostname: isProd ? 'icepointcloud.com' : '192.168.1.176',
-    protocol: isProd ? 'https:' : 'http:',
+    // hostname: isProd ? 'icepointcloud.com' : 'localhost',
+    hostname: 'localhost',
+    // protocol: isProd ? 'https:' : 'http:',
+    protocol: 'http:',
     // HTML5 history API
     historyApiFallback: true,
     // 控制台输出的信息

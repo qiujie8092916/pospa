@@ -12,6 +12,86 @@
       <div style="width: 150px;margin: 10px auto;">
         <el-input v-model='ela'></el-input>
       </div>
+      <div style="width:1000px;margin: 0 auto;">
+        <dr-table ref="table" :colobject="colobject" :tabledata="tdata" @selectedrows="selectedRows" @dblclickrow="openToast" :height="481" selectable has-index hoverable>
+          <template slot="tr" slot-scope="props">
+            <td>
+              <div class="cell cell-left">
+                {{props.item['customerName']}}
+              </div>
+            </td>
+            <td>
+              <div class="cell">
+                {{props.item['customerPhone']}}
+              </div>
+            </td>
+            <td>
+              <div class="cell cell-center">
+                {{props.item['gender'] == 'MALE '? '男 ': (props.item['gender'] == 'FEMALE '? '女 ': '未知 ')}}
+              </div>
+            </td>
+            <td>
+              <div class="cell cell-center">
+                {{props.item['age']}}
+              </div>
+            </td>
+            <td>
+              <div class="cell cell-center">
+                {{props.item['birthday']}}
+              </div>
+            </td>
+            <td>
+              <div class="cell cell-right">
+                {{toFloor(props.item['consumptionAmount'])}}
+              </div>
+            </td>
+            <td>
+              <div class="cell cell-center">
+                {{props.item['memberFlag'] ? '是 ': '否 '}}
+              </div>
+            </td>
+            <td>
+              <div class="cell cell-center">
+                {{props.item['memberLevel'] ? props.item['memberLevel'].memberLevel : ' '}}
+              </div>
+            </td>
+            <td>
+              <div class="cell cell-right">
+                {{props.item['membergrowth']}}
+              </div>
+            </td>
+            <td>
+              <div class="cell cell-right">
+                {{props.item['integral']}}
+              </div>
+            </td>
+            <td>
+              <div class="cell cell-right">
+                {{props.item['balance']}}
+              </div>
+            </td>
+            <td>
+              <div class="cell cell-right">
+                <span v-if="props.item['memberLevel']!=null">
+                  {{Number(props.item['memberLevel']['discount']) * 10 + '% '}}
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class="cell cell-center">
+                <span v-if="props.item['customerType']!=null">
+                  {{props.item['customerType']['customerType']}}
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class="cell cell-center">
+                {{props.item['status'] == 'NORMAL '? '正常 ': '冻结 '}}
+              </div>
+            </td>
+          </template>
+        </dr-table>
+      </div>
     </el-main>
   </div>
 </template>

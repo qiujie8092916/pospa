@@ -3,21 +3,21 @@ import axios from 'axios';
 
 export default {
   methods: {
-    rpc: (apis, fn) => {
+    rpc(apis, fn) {
       let setupApis = [];
-      apis.forEach(function (api) {
+      apis.forEach(function(api) {
         setupApis.push(this.rpcsetup(api));
       });
       axios.all(setupApis)
-        .then(axios.spread(function () {
-          fn(([].slice.call(arguments)).map(function (arg) {
+        .then(axios.spread(function() {
+          fn(([].slice.call(arguments)).map(function(arg) {
             return arg.data.result;
-          }), ([].slice.call(arguments)).map(function (arg) {
+          }), ([].slice.call(arguments)).map(function(arg) {
             return arg.data.error;
           }));
         }));
     },
-    rpcsetup: api => {
+    rpcsetup(api) {
       let config = {
         method: 'post',
         url: 'http://localhost:8080//data/post',
@@ -42,7 +42,7 @@ export default {
      * @param  {[boolean]}     _empty [是否判断空字符串]
      * @return {[boolean]}   [是否存在]
      */
-    has: (field, _empty) => {
+    has(field, _empty) {
       let empty = _empty || false;
       if (empty) {
         if (field === undefined ||
@@ -61,7 +61,7 @@ export default {
         }
       }
     },
-    add: (a, b) => { // 解决浮点问题的加法
+    add(a, b) { // 解决浮点问题的加法
       let c, d, e;
       try {
         c = a.toString().split('.')[1].length;
@@ -76,7 +76,7 @@ export default {
       e = Math.pow(10, Math.max(c, d));
       return (this.mul(a, e) + this.mul(b, e)) / e;
     },
-    sub: (a, b) => { // 解决浮点问题的减法
+    sub(a, b) { // 解决浮点问题的减法
       let c, d, e;
       try {
         c = a.toString().split('.')[1].length;
@@ -91,7 +91,7 @@ export default {
       e = Math.pow(10, Math.max(c, d));
       return (this.mul(a, e) - this.mul(b, e)) / e;
     },
-    mul: (a, b) => { // 解决浮点问题的乘法
+    mul(a, b) { // 解决浮点问题的乘法
       let c = 0,
         d = a.toString(),
         e = b.toString();
@@ -103,7 +103,7 @@ export default {
       } catch (f) {}
       return Number(d.replace('.', '')) * Number(e.replace('.', '')) / Math.pow(10, c);
     },
-    divid: (a, b) => { // 解决浮点问题的除法
+    divid(a, b) { // 解决浮点问题的除法
       let c, d, e = 0,
         f = 0;
       try {
@@ -117,7 +117,7 @@ export default {
       return this.mul(c / d, Math.pow(10, f - e));
     },
     // 将任何数据转换成数字字符串
-    toDecimal: (num, round, type) => {
+    toDecimal(num, round, type) {
       let r;
       if (typeof round === 'number') {
         r = parseInt(round, 10);
@@ -132,7 +132,7 @@ export default {
       }
     },
     // 截取小数点
-    toFloor: (num, round, type) => {
+    toFloor(num, round, type) {
       let r;
       if (typeof round === 'number') {
         r = parseInt(round, 10);
@@ -150,8 +150,8 @@ export default {
       }
     },
     // 查询当前物理地址
-    ipAddress: () => {
-      $.getScript((window.location.protocol.indexOf('https') > -1 ? 'https' : 'http') + '://pv.sohu.com/cityjson?ie=utf-8', function () {
+    ipAddress() {
+      $.getScript((window.location.protocol.indexOf('https') > -1 ? 'https' : 'http') + '://pv.sohu.com/cityjson?ie=utf-8', function() {
         if (window.returnCitySN && window.returnCitySN.cname && window.returnCitySN.cname !== '') {
           this.physicalAddress = window.returnCitySN.cname.indexOf('市') > -1 ? window.returnCitySN.cname.substring(0, window.returnCitySN.cname.indexOf('市') + 1) : window.returnCitySN.cname;
         } else {
@@ -160,14 +160,14 @@ export default {
         }
       });
     },
-    HTMLDecode: (text) => {
+    HTMLDecode(text) {
       let temp = document.createElement('div');
       temp.innerHTML = text;
       let output = temp.innerText || temp.textContent;
       temp = null;
       return output;
     },
-    HTMLEncode: (html) => {
+    HTMLEncode(html) {
       let temp = document.createElement('div');
       (temp.textContent != null) ? (temp.textContent = html) : (temp.innerText = html);
       let output = temp.innerHTML;
@@ -180,7 +180,7 @@ export default {
   }
 };
 
-Array.prototype.contains = function (obj) {
+Array.prototype.contains = function(obj) {
   let i = this.length;
   if (!i) {
     while (i--) {
