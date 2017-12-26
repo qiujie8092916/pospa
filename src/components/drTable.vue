@@ -913,30 +913,30 @@ export default {
   }
   width: 100%;
   max-width: 100%;
-  color: #1f2d3d;
+  color: #5e6167;
   box-sizing: border-box;
   position: relative;
   .drheader-wrapper {
     position: absolute;
     overflow: hidden;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #ebeef5;
     z-index: 2;
     table {
-      background: #efefef;
+      background: #f5f7fa;
       position: relative;
     }
   }
   .drbody-wrapper {
     overflow: auto;
     td.index-td {
-      background: #efefef;
+      background: #f5f7fa;
       text-align: center !important;
     }
   }
   .fldrbody-wrapper {
     overflow: hidden !important;
     td.index-td {
-      background: #efefef;
+      background: #f5f7fa;
       text-align: center !important;
     }
     td:not(:first-child) {
@@ -953,7 +953,7 @@ export default {
     }
     td,
     th {
-      border-top: 1px solid #ccc;
+      border-top: 1px solid #ebeef5;
       text-align: center !important;
     }
   }
@@ -968,13 +968,13 @@ export default {
     table-layout: fixed;
   }
   tr.hover-tr {
-    background: #efefef;
+    background: #f5f7fa;
   }
   td,
   th {
     font-size: 12px;
-    border-bottom: 1px solid #ccc;
-    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ebeef5;
+    border-right: 1px solid #ebeef5;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -1046,27 +1046,27 @@ export default {
     top: 0;
     left: 0;
     width: 1px;
-    border-right: 1px solid #ccc;
+    border-right: 1px solid #ebeef5;
   }
   .border-right {
     top: 0;
     right: 0;
     width: 1px;
-    border-right: 1px solid #ccc;
+    border-right: 1px solid #ebeef5;
   }
   .border-bottom {
     left: 0;
     bottom: 0;
     width: 100%;
     height: 1px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ebeef5;
   }
   .resize-proxy {
     position: absolute;
     top: 0;
     bottom: 0;
     width: 0;
-    border-left: 1px solid #ccc;
+    border-left: 1px solid #ebeef5;
     z-index: 10;
   }
   .contextmenu {
