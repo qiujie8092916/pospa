@@ -30,8 +30,6 @@ cooking.set({
     lazy: false
   },
   // production
-  debug: false,
-  devtools: false,
   clean: true,
   hash: true,
   sourceMap: true,
@@ -55,19 +53,7 @@ cooking.set({
     'root': __dirname
   },
   extends: ['vue2', 'lint', 'sass', 'autoprefixer'],
-  externals: build.externals(),
-  plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: '"production"'
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    })
-  ]
+  externals: build.externals()
 });
 
 module.exports = cooking.resolve();
