@@ -15,6 +15,11 @@ Vue.use(ElementUI, { size: 'mini' });
 // Vue.use(VueResource);
 Vue.use(VueRouter);
 
+const prod = process.env.NODE_ENV === 'production';
+Vue.config.debug = prod;
+Vue.config.devtools = prod;
+Vue.config.productionTip = prod;
+
 new Vue({ // eslint-disable-line
   router,
   store,

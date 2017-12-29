@@ -2,11 +2,12 @@ var path = require('path');
 var webpack = require('webpack');
 var cooking = require('cooking');
 var build = require('./build.js');
-var isProd = process.env.NODE_ENV === 'production';
+
 cooking.set({
   entry: build.entries(),
   template: build.templates(),
   dist: './dist',
+  use: 'vue',
   devServer: {
     enable: true,
     port: 8081,
@@ -18,9 +19,7 @@ cooking.set({
     extractCSS: true,
     // 显示日志信息在页面上
     log: true,
-    // hostname: isProd ? 'icepointcloud.com' : 'localhost',
     hostname: 'localhost',
-    // protocol: isProd ? 'https:' : 'http:',
     protocol: 'http:',
     // HTML5 history API
     historyApiFallback: true,
@@ -31,9 +30,8 @@ cooking.set({
     lazy: false
   },
   // production
-  debug: !isProd,
-  devtools: !isProd,
-  productionTip: !isProd,
+  debug: false,
+  devtools: false,
   clean: true,
   hash: true,
   sourceMap: true,
@@ -48,7 +46,7 @@ cooking.set({
   urlLoaderLimit: 10000,
   // static: true,
   // devtool: '#cheap-module-eval-source-map',
-  devtool: '#source-map',
+  devtool: '#cheap-module-source-map',
   extractCSS: '[name].[contenthash:7].css',
   alias: {
     'vue$': 'vue/dist/vue.js',
@@ -57,6 +55,19 @@ cooking.set({
     'root': __dirname
   },
   extends: ['vue2', 'lint', 'sass', 'autoprefixer'],
-  externals: build.externals()
+  externals: build.externals(),
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"production"'
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    })
+  ]
 });
+
 module.exports = cooking.resolve();

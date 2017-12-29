@@ -988,7 +988,7 @@ export default {
     openToast(index) {
       this.$notify.warning({
         title: '：' + this.tdata[index].customerName,
-        message: '双击我干嘛？' + process.env.NODE_ENV
+        message: '双击我干嘛？'
       });
     }
   },
