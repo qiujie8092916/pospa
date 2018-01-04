@@ -44,7 +44,7 @@ cooking.set({
   urlLoaderLimit: 10000,
   // static: true,
   // devtool: '#cheap-module-eval-source-map',
-  devtool: '#cheap-module-source-map',
+  devtool: '#eval-source-map',
   extractCSS: '[name].[contenthash:7].css',
   alias: {
     'vue$': 'vue/dist/vue.js',
