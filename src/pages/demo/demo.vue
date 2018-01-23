@@ -4,9 +4,10 @@
   </div>
 </template>
 <script>
-import App from './demo';
-export default App;
+import App from './demo'
+export default App
 </script>
 <style lang='scss' scoped>
 @import './demo';
+
 </style>

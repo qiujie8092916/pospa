@@ -6,9 +6,10 @@
   </div>
 </template>
 <script>
-import App from './selling_out_details';
-export default App;
+import App from './selling_out_details'
+export default App
 </script>
 <style lang='scss' scoped>
 @import './selling_out_details';
+
 </style>

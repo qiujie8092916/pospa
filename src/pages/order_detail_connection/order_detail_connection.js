@@ -1,9 +1,9 @@
-import App from './order_detail_connection.vue';
+import App from './order_detail_connection.vue'
 export default {
-  data() {
+  data () {
     return {
       title: '新建零售单'
-    };
+    }
   },
   ...App
-};
+}

@@ -1,9 +1,6 @@
 <template>
   <el-container style="height:100%">
     <el-header style="height:26px;">
-      <!-- <router-link to="/home" class="navbar-brand pull-left pln">
-        <img alt="icepointcloud-logo" src="https://storage.icepointcloud.com//8cce867937cba010627a503748e6aa2b/20171012/659aa202-9edb-43fd-8c9e-b83e1aaf22858996416171504304110.png-jpg" width="85" />
-      </router-link> -->
       <el-menu menu-trigger="click" :default-active="activeHeader" class="el-menu pull-left" mode="horizontal" @select="handleNavClick">
         <el-menu-item index="dashBoard">
           <router-link to="/dashBoard">主页</router-link>
@@ -31,15 +28,15 @@
   </el-container>
 </template>
 <script>
-import multiTab from '@/components/multiTab';
-import mixins from '@/globalMixin';
+import multiTab from '@/components/multiTab'
+import mixins from '@/globalMixin'
 export default {
   name: 'admin',
   mixins: [mixins],
   components: {
     'multiTab': multiTab
   },
-  data() {
+  data () {
     return {
       noNeedNav: [
         801, // 订货配置
@@ -51,49 +48,51 @@ export default {
         301 // 库存
       ],
       activeAuth: []
-    };
+    }
   },
   computed: {
-    auths() {
-      return this.$store.state.authNav.auths;
+    auths () {
+      return this.$store.state.authNav.auths
     },
-    activeHeader() {
+    activeHeader () {
       if (this.$route.path === '/' ||
         this.$route.path === '/dashBoard') {
         this.activeAuth[0] = {
           authorityName: '主页',
           authorityCode: 'dashBoard',
           authorityHtmlElement: 'dashBoard.jsp'
-        };
+        }
       } else {
         this.activeAuth = this.auths.filter(auth => {
-          return (auth.authorityHtmlElement && (this.fakeUrl(auth.authorityHtmlElement) === this.$route.path.split('/')[1]));
-        });
+          return (auth.authorityHtmlElement && (this.fakeUrl(auth.authorityHtmlElement) === this.$route.path.split('/')[1]))
+        })
       }
-      return this.activeAuth[0].authorityCode;
+      return this.activeAuth[0].authorityCode
     }
   },
-  created() {
+  created () {
     let r = this.$router.options.routes.filter(route => {
-      return route.path === '/' + location.href.split('/').pop();
-    });
-    this.$router.push({
-      name: (r && r.length) ? r[0].name : this.$router.options.routes[0].name,
-      path: (r && r.length) ? r[0].path : this.$router.options.routes[0].path
-    });
+      return route.path === '/' + location.href.split('/').pop()
+    })
+    if (r && r.length) {
+      this.$router.push({
+        name: r[0].name,
+        path: r[0].path
+      })
+    }
   },
   methods: {
-    handleNavClick(key) {
+    handleNavClick (key) {
       let auth = this.auths.filter(auth => {
-        return auth.authorityCode === key;
-      });
+        return auth.authorityCode === key
+      })
       this.$router.push({
         name: (auth && auth.length) ? auth[0].authorityName : '主页',
         path: (auth && auth.length) ? this.fakeUrl(auth[0].authorityHtmlElement) : 'dashBoard'
-      });
+      })
     }
   }
-};
+}
 </script>
 <style lang="scss" scoped>
 .el-header {
@@ -106,4 +105,5 @@ export default {
     }
   }
 }
+
 </style>

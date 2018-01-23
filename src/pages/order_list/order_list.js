@@ -1,9 +1,9 @@
-import App from './order_list.vue';
+import App from './order_list.vue'
 export default {
-  data() {
+  data () {
     return {
       title: '零售单'
-    };
+    }
   },
   ...App
-};
+}

@@ -1,5 +1,5 @@
 @import '../../assets/theme/element-variables.scss';
-
+@import '../../assets/fonts/iconfont.css';
 
 /*
   覆盖../theme/element-variables.scss主题变量
@@ -44,9 +44,6 @@ $--font-path: '../fonts';
   }
   .el-tabs__content {
     height: calc(100% - 55px);
-    &>.el-tab-pane {
-      // height: 100%;
-    }
   }
 }
 .el-menu-item {
@@ -62,4 +59,14 @@ $--font-path: '../fonts';
 .el-notification {
   width: 300px;
   border-radius: 2px;
+  padding: 10px 26px 10px 10px;
+  .el-notification__title{
+    font-size: 15px;
+  }
+  .el-notification__content{
+    font-size: 13px;
+  }
+  .el-notification__closeBtn{
+    right: 12px;
+  }
 }

@@ -14,100 +14,94 @@
   </div>
 </template>
 <script>
-import multiTab from './multiTab';
-import mixins from '../globalMixin.js';
+import mixins from '../globalMixin.js'
+import { mapState, mapMutations } from 'vuex'
+
 export default {
   name: 'multiTab',
   mixins: [mixins],
-  components: {
-    'leftSideBar': multiTab
-  },
-  data() {
-    return {};
+  data () {
+    return {}
   },
   computed: {
+    ...mapState({
+      'tabs': state => state.multiTab.tabs,
+      'auths': state => state.authNav.auths
+    }),
     activeTab: {
-      get() {
-        return this.$store.state.multiTab.activeTab;
+      get () {
+        return this.$store.state.multiTab.activeTab
       },
-      set(val) {
-        this.$store.commit('setActiveTab', val);
-      }
-    },
-    tabs: {
-      get() {
-        return this.$store.state.multiTab.tabs;
-      },
-      set(val) {
-        this.$store.commit('setTabs', val);
+      set (tab) {
+        this.SET_ACTIVE_TAB(tab)
       }
     }
   },
-  mounted() {
-    this.$store.commit('addTab', {
+  created () {
+    this.ADD_TAB({
       route: '/dashBoard',
       name: '主页'
-    });
-    // 开始非主页
-    if (this.$route.path === '/dashBoard') {
-      this.$store.commit('setActiveTab', '/dashBoard');
-    }
+    })
+    this.SET_ACTIVE_TAB(this.$route.path)
   },
   methods: {
-    handleClick(tab) {
+    ...mapMutations([
+      'ADD_TAB',
+      'REMOVE_TAB',
+      'SET_ACTIVE_TAB'
+    ]),
+    handleClick (tab) {
       let route = this.$router.options.routes.filter(route => {
-        return route.path === tab.name;
-      });
+        return route.path === tab.name
+      })
       this.$router.push({
         name: route[0].name,
         path: route[0].path
-      });
+      })
     },
-    handleTabsEdit(targetName, action) {
+    handleTabsEdit (targetName, action) {
       if (action === 'remove') {
-        this.$store.commit('removeTab', targetName);
+        this.REMOVE_TAB(targetName)
       }
     }
   },
   watch: {
     '$route' (to) {
-      if (to.path === '/' ||
-        to.path === '/dashBoard') {
-        this.$store.commit('setActiveTab', '/dashBoard');
-      } else {
-        let flag = 0;
-        this.tabs.forEach(tab => {
-          if (tab.name === to.name) {
-            flag = !0;
-            this.$store.commit('setActiveTab', '/' + to.path.split('/')[1]);
-          }
-        });
-        if (!flag) {
-          this.$store.commit('addTab', { route: '/' + to.path.split('/')[1], name: to.name });
-          this.$store.commit('setActiveTab', '/' + to.path.split('/')[1]);
+      let flag = 0
+      this.tabs.forEach(tab => {
+        if (tab.name === to.name) {
+          flag = !0
+          this.SET_ACTIVE_TAB(to.path)
         }
+      })
+      if (!flag) {
+        this.ADD_TAB({
+          route: to.path,
+          name: to.name
+        })
+        this.SET_ACTIVE_TAB(to.path)
       }
     },
     'activeTab' (nv, ov) {
       if (nv !== ov) {
         let activeHeader = this.$store.state.authNav.auths.filter(auth => {
-          return '/'.concat(auth.authorityHtmlElement).split('.')[0] === nv;
-        });
+          return '/'.concat(auth.authorityHtmlElement).split('.')[0] === nv
+        })
         if (activeHeader.length) {
           this.$router.push({
             name: activeHeader[0].authorityName,
             path: '/'.concat(activeHeader[0].authorityHtmlElement).split('.')[0]
-          });
+          })
         } else if (nv === '/dashBoard') {
           this.$router.push({
             name: '主页',
             path: '/dashBoard'
-          });
+          })
         }
       }
     }
   }
-};
+}
 </script>
 <style lang="scss" scoped>
 .template-tabs {

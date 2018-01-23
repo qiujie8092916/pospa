@@ -1,14 +1,15 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
-import authNav from './modules/authNav/index.js';
-import multiTab from './modules/multiTab/index.js';
-import dashBoard from './modules/dashBoard/';
-Vue.use(Vuex);
+import authNav from './modules/authNav'
+import multiTab from './modules/multiTab'
+import dashBoard from './modules/dashBoard'
+
+import Vue from 'vue'
+import Vuex from 'vuex'
+Vue.use(Vuex)
 
 export default new Vuex.Store({
   modules: {
-    authNav: authNav,
-    multiTab: multiTab,
-    dashBoard: dashBoard
+    authNav,
+    multiTab,
+    dashBoard
   }
-});
+})

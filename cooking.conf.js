@@ -1,7 +1,7 @@
-var path = require('path');
-var webpack = require('webpack');
-var cooking = require('cooking');
-var build = require('./build.js');
+var path = require('path')
+// var webpack = require('webpack')
+var cooking = require('cooking')
+var build = require('./build.js')
 
 cooking.set({
   entry: build.entries(),
@@ -38,13 +38,12 @@ cooking.set({
   postcss: [
     // require('postcss-salad')
   ],
-  //入口html<script>的src对应路径
+  // 入口html<script>的src对应路径
   publicPath: '../',
   assetsPath: 'assets',
   urlLoaderLimit: 10000,
   // static: true,
-  // devtool: '#cheap-module-eval-source-map',
-  devtool: '#eval-source-map',
+  devtool: '#cheap-module-eval-source-map',
   extractCSS: '[name].[contenthash:7].css',
   alias: {
     'vue$': 'vue/dist/vue.js',
@@ -54,6 +53,6 @@ cooking.set({
   },
   extends: ['vue2', 'lint', 'sass', 'autoprefixer'],
   externals: build.externals()
-});
+})
 
-module.exports = cooking.resolve();
+module.exports = cooking.resolve()

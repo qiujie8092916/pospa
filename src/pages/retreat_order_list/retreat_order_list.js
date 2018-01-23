@@ -1,9 +1,9 @@
-import App from './retreat_order_list.vue';
+import App from './retreat_order_list.vue'
 export default {
-  data() {
+  data () {
     return {
       title: '零售退货单'
-    };
+    }
   },
   ...App
-};
+}

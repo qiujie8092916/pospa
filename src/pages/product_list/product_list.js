@@ -1,19 +1,19 @@
-import App from './product_list.vue';
-import mixins from '../../globalMixin.js';
-import $ from 'jquery';
+import App from './product_list.vue'
+import mixins from '../../globalMixin.js'
+import $ from 'jquery'
 export default {
   mixins: [mixins],
-  data() {
+  data () {
     return {
       title: '商品页'
-    };
+    }
   },
-  mounted() {
-    this.getNormal();
+  mounted () {
+    this.getNormal()
     // this.getJsonp();
   },
   methods: {
-    getNormal() {
+    getNormal () {
       $.ajax({
         url: 'http://localhost:8080/api/data/post?sn=Q1234567890&requesttime=21345432',
         type: 'post',
@@ -32,14 +32,14 @@ export default {
           }]
         }),
         success: function () {
-          console.log('success');
+          console.log('success')
         },
         error: function () {
-          console.error('error');
+          console.error('error')
         }
-      });
+      })
     },
-    getJsonp() {
+    getJsonp () {
       this.$http.jsonp('http://localhost:8080/gateway/api/jsonrpc.jsp', {
         params: {
           query: JSON.stringify({
@@ -53,11 +53,11 @@ export default {
         },
         jsonp: 'listStoreOrRepositoryByCompanyId'
       }).then(function (r) {
-        console.log('请求成功！！！', r);
+        console.log('请求成功！！！', r)
       }, function (e, s) {
-        console.log('请求失败！！！', e, s);
-      });
+        console.log('请求失败！！！', e, s)
+      })
     }
   },
   ...App
-};
+}

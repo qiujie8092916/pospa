@@ -218,20 +218,6 @@ hr.tall {
   font-size: 19px;
   /* line-height: 56px; */
 }
-#toggle_sidemenu_l {
-  float: left;
-  margin-left: 25px;
-  width: 40px;
-  max-height: 60px;
-  color: #7e46a7;
-  font-size: 19px;
-  line-height: 60px;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-}
 .sidebar-collapsed #toggle_sidemenu_l {
   font-size: 24px;
 }
@@ -768,10 +754,6 @@ hr.tall {
 }
 
 /* User Area - Avatar */
-
-.user-info .media-object {
-  /* border-color: #c7b7e5; */
-}
 .user-info .media-object img {
   max-width: 50px;
 }
@@ -1484,13 +1466,6 @@ body.sidebar-right-open #sidebar_right {
 * an icon was given a larger font size than its sibling
 * text. To fix Line height, vertical align, and top
 * positioning have been redefined */
-
-.btn .glyphicon, .btn .glyphicons {
-  /* top: -1px; */
-  /* vertical-align: middle; */
-  /* font-size: 1.1em; */
-  /* line-height: 0; */
-}
 
 /* A Helper Class to Align Icons Right in Control-forms */
 
@@ -5293,15 +5268,6 @@ input.ui-editRangeSlider-inputValue {
   width: 34%;
   text-align: right;
 }
-.clndr .clndr-controls .clndr-control-button .clndr-next-button {
-  cursor: pointer;
-  -webkit-user-select: none;
-  /* Chrome/Safari */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* IE10+ */
-}
 .clndr .clndr-controls .clndr-control-button .clndr-next-button:hover {
   background: #ddd;
 }
@@ -5311,15 +5277,6 @@ input.ui-editRangeSlider-inputValue {
 .clndr .clndr-controls .clndr-control-button .clndr-next-button.inactive:hover {
   background: none;
   cursor: default;
-}
-.clndr .clndr-controls .clndr-control-button .clndr-previous-button {
-  cursor: pointer;
-  -webkit-user-select: none;
-  /* Chrome/Safari */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* IE10+ */
 }
 .clndr .clndr-controls .clndr-control-button .clndr-previous-button:hover {
   background: #ddd;
@@ -5488,7 +5445,6 @@ td.legendColorBox {
   min-height: 368px;
   text-align: justify;
   font-size: 0.1px;
-  -webkit-backface-visibility: hidden;
 }
 #Grid:after {
   display: inline-block;
@@ -6070,14 +6026,6 @@ div.dynatree-drag-helper a {
   background-color: white;
   opacity: 0.8;
 }
-span.dynatree-drag-helper-img {
-  /* position: relative; */
-  /* left: -16px; */
-}
-div.dynatree-drag-helper {
-  /* border-color: green; */
-  /* background-color: red; */
-}
 div.dynatree-drop-accept span.dynatree-drag-helper-img {
   background-position: -32px -112px;
 }
@@ -6118,19 +6066,12 @@ span.dynatree-drag-source a {
 }
 
 /* Target node while dragging cursor is over it */
-
-span.dynatree-drop-target {
-  /* border: 1px solid gray; */
-}
 span.dynatree-drop-target.dynatree-drop-accept a {
   /* border: 1px solid green; */
   background-color: #3169C6 !important;
   color: white !important;
   /* @ IE6 */
   text-decoration: none;
-}
-span.dynatree-drop-target.dynatree-drop-reject {
-  /* border: 1px solid red; */
 }
 
 /*===============================================

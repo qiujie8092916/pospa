@@ -1,9 +1,13 @@
-import App from './dashBoard.vue';
-import store from '@//store';
-import leftSideBar from '@/components/leftSideBar';
-import formatInput from '@/components/formatInput';
-import drTable from '@/components/drTable';
-import mixin from '@/globalMixin';
+import App from './dashBoard.vue'
+import store from '@//store'
+import leftSideBar from '@/components/leftSideBar'
+import formatInput from '@/components/formatInput'
+import drTable from '@/components/drTable'
+import mixin from '@/globalMixin'
+import {
+  mapGetters
+} from 'vuex'
+
 export default {
   store,
   mixins: [mixin],
@@ -12,7 +16,7 @@ export default {
     formatInput: formatInput,
     drTable: drTable
   },
-  data() {
+  data () {
     return {
       title: '主页',
       input: '',
@@ -20,6 +24,7 @@ export default {
       colobject: [{
         label: '姓名',
         prop: 'customerName',
+        // fixed: true,
         width: '100',
         dataType: 'STRING',
         supportedOpType: [{
@@ -98,7 +103,7 @@ export default {
         width: '80',
         dataType: 'ENUM-BETWEEN'
         /* ,
-                      supportedOpType: [levelListStart, levelListEnd]*/
+                      supportedOpType: [levelListStart, levelListEnd] */
       }, {
         label: '成长值',
         prop: 'membergrowth',
@@ -974,23 +979,23 @@ export default {
         totalPage: 0,
         selectedRowLength: 0
       }
-    };
-  },
-  computed: {
-    isInput() {
-      return this.$store.getters.getIsInput;
     }
   },
+  computed: {
+    ...mapGetters([
+      'getIsInput'
+    ])
+  },
   methods: {
-    selectedRows(data) {
-      this.page.selectedRowLength = data.length;
+    selectedRows (data) {
+      this.page.selectedRowLength = data.length
     },
-    openToast(index) {
+    openToast (index) {
       this.$notify.warning({
-        title: '：' + this.tdata[index].customerName,
+        title: this.tdata[index].customerName + ':',
         message: '双击我干嘛？'
-      });
+      })
     }
   },
   ...App
-};
+}
