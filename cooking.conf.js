@@ -46,7 +46,7 @@ cooking.set({
   devtool: '#cheap-module-eval-source-map',
   extractCSS: '[name].[contenthash:7].css',
   alias: {
-    'vue$': 'vue/dist/vue.js',
+    // 'vue$': 'vue/dist/vue.js',
     'jquery': path.resolve(__dirname, './node_modules/jquery/src/jquery'),
     '@': path.join(__dirname, 'src'),
     'root': __dirname
